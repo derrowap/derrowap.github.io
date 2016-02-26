@@ -20,12 +20,15 @@
 		Bootstrap Tables Reference</a> 
 		for a complete reference of all table classes.
 	</p>
+	<p>
+		Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.
+	</p>
 </div>
 <div class="container">
 	<h2>Basic Table</h2>
 	<p>
-		The .table class adds basic styling (light padding and only horizontal dividers) to a 
-		table:
+		The .table class adds basic styling (light padding and only horizontal dividers) to a table:
 	</p>
 	<table class="table">
 		<thead>
@@ -154,6 +157,87 @@
 		cutting cell padding in half:
 	</p>
 	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Austin</td>
+				<td>Pinion</td>
+				<td>derrowap@rose-hulman.edu</td>
+			</tr>
+			<tr>
+				<td>Mary</td>
+				<td>Moe</td>
+				<td>mary@example.com</td>
+			</tr>
+			<tr>
+				<td>July</td>
+				<td>Dooley</td>
+				<td>july@example.com</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="container">
+	<h2>Contextual Classes</h2>
+	<p>
+		Contextual classes can be used to color table rows or table cells.
+		The classes than can be used are: .active, .success, .info, .warning,
+		and .danger.
+	</p>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<td>Active</td>
+				<td>Row</td>
+				<td>active@example.com</td>
+			</tr>
+			<tr class="success">
+				<td>Success</td>
+				<td>Row</td>
+				<td>success@example.com</td>
+			</tr>
+			<tr class="info">
+				<td>Info</td>
+				<td>Row</td>
+				<td>info@example.com</td>
+			</tr>
+			<tr class="warning">
+				<td>Warning</td>
+				<td>Tow</td>
+				<td>warning@example.com</td>
+			</tr>
+			<tr class="danger">
+				<td>Danger</td>
+				<td>Row</td>
+				<td>danger@example.com</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="container table-responsive">
+	<h2>Responsive Table</h2>
+	<p>
+		The .table-responsive class creates a responsive table which will scroll 
+		horizontally on small devices (under 768px). When viewing on anything larger than
+		768px wide, there is no difference:
+	</p>
+	<p>
+		If on a large screen, decrease the size of the window to notice the difference.
+	</p>
+	<table class="table">
 		<thead>
 			<tr>
 				<th>Firstname</th>
