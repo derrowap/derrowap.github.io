@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Images</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+<div class="container">
+	<h1>Learning Bootstrap Images</h1>
+	<p>
+		Here is link to 
+		<a target="_blank" 
+		href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_images.asp">
+		Bootstrap Image Reference</a> 
+		for a complete reference of all image classes.
+	</p>
+	<p>
+		Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.
+	</p>
+</div>
+<div class="container">
+	<h2>Rounded Corner Image</h2>
+	<p>
+		The .image-rounded class adds rounded corneres to an image. Even though
+		it is not supported in IE8, who uses that browser anyway!
+	</p>
+	<img src="images/nature-flower.jpg" class="img-rounded" 
+	alt="Purple Flower" width="600" height="400">
+</div>
+<div class="container">
+	<h2>Circle Image</h2>
+	<p>
+		The .img-circle class shapes the image to a circle 
+		(also not available in IE8):
+	</p>
+	<img src="images/nature-tree.jpg" class="img-circle" 
+	alt="Nature Tree" width="600" height="400">
+</div>
+<div class="container">
+	<h2>Thumbnail Image</h2>
+	<p>The .img-thumbnail class creates a thumbnail of the image:</p>
+	<img src="images/nature-elephant.jpg" class="img-thumbnail"
+	alt="Elephant" width="600" height="400">
+</div>
+<div class="container">
+	<h2>Responsive Image</h2>
+	<p>
+		The .img-responsive class makes the image scale nicely to the parent
+		element (resize the browser window to see the effect). This class
+		applies 
+		<code>display: block;</code> and
+		<code>max-width: 100%;</code> and
+		<code>height: auto;</code> to the image:
+	</p>
+	<img src="images/nature-boat.jpg" class="img-responsive" alt="Boat on Water"
+	width="600" height="400">
+</div>
+<div class="container">
+	<h2>Image Gallery</h2>
+	<p>the .thumbnail class can be used to display an image gallery. 
+	Click on the images to see it in full size:</p>
+	<div class="row">
+		<div class="col-xs-4">
+			<a href="images/nature-brain.jpg" class="thumbnail">
+			<p>An image of the human brain represented by nature.</p>
+			<img src="images/nature-brain.jpg" alt="Nature Brain"
+			style="width:150px;height:150px">
+			</a>
+		</div>
+		<div class="col-xs-4">
+			<a href="images/nature-rainbow.jpg" class="thumbnail">
+			<p>A large rainbow casted over the mountains.</p>
+			<img src="images/nature-rainbow.jpg" alt="Nature Rainbow"
+			style="width:150px;height:150px">
+			</a>
+		</div>
+		<div class="col-xs-4">
+			<a href="images/nature-scenary.jpg" class="thumbnail">
+			<p>An great view of how beautiful nature can be.</p>
+			<img src="images/nature-scenary.jpg" alt="Nature Scenary"
+			style="width:150px;height:150px">
+			</a>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<h2>Responsive Embed</h2>
+	<p>Allows videos or slideshows to scale properly on any device.</p>
+	<p>The .embed-responsive class can be applied to iframe, embed, video, and object
+	elements.</p>
+	<p>You can also decide on the aspect ratio of 16:9 or 4:3.</p>
+	<p>This is a responsive video that will scale to the parent element.</p>
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe src="https://www.youtube.com/embed/ayriQHgsPCc" 
+		class="embed-responsive-item"></iframe>
+	</div>
+</div>
+
+</html>
