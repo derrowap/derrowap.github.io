@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>List Groups</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 100px">
+	<div class="container">
+		<h1>Learning Bootstrap List Groups</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+	</div>
+	<div class="container">
+		<h2>Basic List Groups</h2>
+		<p>Most basic is unordered list with list items. To create a list group, add
+		.list-group class to < ul > element and .list-group-item class to < li > element:</p>
+		<ul class="list-group">
+			<li class="list-group-item">First Item</li>
+			<li class="list-group-item">Second Item</li>
+			<li class="list-group-item">Third Item</li> 
+		</ul>
+	</div>
+	<div class="container">
+		<h2>List Group With Badges</h2>
+		<p>To add a badge to a list group, add .badge class in a < span > element inside
+		the list item:</p>
+		<ul class="list-group">
+			<li class="list-group-item"><span class="badge">12</span> New Emails</li>
+			<li class="list-group-item"><span class="badge">5</span> Sent Emails</li>
+			<li class="list-group-item"><span class="badge">952</span> Deleted Emails</li> 
+		</ul>
+	</div>
+	<div class="container">
+		<h2>List Group With Linked Items</h2>
+		<p>To link list items, use < div > instead of < ul > and < a > instead of < li >:</p>
+		<div class="list-group">
+			<a href="http://www.youtube.com" class="list-group-item">YouTube</a>
+			<a href="http://www.facebook.com" class="list-group-item">Facebook</a>
+			<a href="http://www.twitter.com" class="list-group-item">Twitter</a>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Active States</h2>
+		<p>Add .active class to list item to highlight the current item, and a .disabled
+		class to disable an item:</p>
+		<div class="list-group">
+			<a href="http://www.youtube.com" class="list-group-item active">YouTube</a>
+			<a href="http://www.facebook.com" class="list-group-item">Facebook</a>
+			<a href="http://www.twitter.com" class="list-group-item disabled">Twitter</a>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Contextual Classes</h2>
+		<p>List Items can use the following contextual classes: .list-group-item-success, 
+		.list-group-item-info, .list-group-item-warning, .list-group-item-danger.</p>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-success">Success</li>
+			<li class="list-group-item list-group-item-info">Info</li>
+			<li class="list-group-item list-group-item-warning">Warning</li> 
+			<li class="list-group-item list-group-item-danger">Danger</li> 
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Custom List Groups</h2>
+		<p>There can be almost any html inside a list group item. For example, Bootstrap has
+		.list-group-item-heading and .list-group-item-text classes:</p>
+		<div class="list-group">
+			<a href="#" class="list-group-item active">
+				<h4 class="list-group-item-heading">First List Group Item Heading</h4>
+				<p class="list-group-item-text">List Group Item Text</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+				<p class="list-group-item-text">List Group Item Text</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+				<p class="list-group-item-text">List Group Item Text</p>
+			</a>
+		</ul>
+	</div>
+</body>
+
+</html>
