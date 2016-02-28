@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dropdowns</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 150px">
+	<div class="container">
+		<h1>Learning Bootstrap Dropdowns</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>Here is link to <a target="_blank" 
+		href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_dropdown.asp">
+		Bootstrap JS Dropdown Reference</a> for a complete lists of all dropdown options.</p>
+		<p>A dropdown is a menu that allows a user to choose one value form a predefined list.
+		</p>
+	</div>
+	<div class="container">
+		<h2>Basic Dropdown</h2>
+		<p>A .dropdown class on a < div > element indicates a dropdown menu.</p>
+		<p>Use a button or link with .dropdown-toggle class and data-toggle="dropdown"
+		attribute to open the dropdown menu.</p>
+		<p>The .caret class is the down arrow icon indicating the button is a dropdown.</p>
+		<p>To build the dropdown menu, add the .dropdown-menu class to a < ul > element:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Dropdown Divider</h2>
+		<p>Add .divider class to < li > element to seperate links inside a dropdown menu:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li class="divider"></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Dropdown Header</h2>
+		<p>Add .dropdown-header to < li > element to add headers inside the dropdown:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">Dropdown Heading 1</li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Dropdown Heading 2</li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Dropdown Disable</h2>
+		<p>Add .disabled class to < li > element to disable user from selecting it:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">Dropdown Heading 1</li>
+				<li><a href="#">HTML</a></li>
+				<li class="disabled"><a href="#">CSS</a></li>
+				<li class="disabled"><a href="#">JavaScript</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Dropdown Heading 2</li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Dropdown Position</h2>
+		<p>Change the allignment of the dropdown menu by adding the class 
+		.dropdown-menu-right to the < ul > element:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li class="dropdown-header">Dropdown Heading 1</li>
+				<li><a href="#">HTML</a></li>
+				<li class="disabled"><a href="#">CSS</a></li>
+				<li class="disabled"><a href="#">JavaScript</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Dropdown Heading 2</li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>DropUP</h2>
+		<p>To make the dropdown menu go up, add the .dropup class to the div element:</p>
+		<div class="dropup">
+			<button class="btn btn-primary dropdown-toggle" type="button" 
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header">Dropdown Heading 1</li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Dropdown Heading 2</li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Dropdown Accessibility</h2>
+		<p>To help people who use screen readers, always make sure you add the the
+		role's, tabindexe's, id's, and aria-labelledby:</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" id="menu1"
+			data-toggle="dropdown">Dropdown Example <span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				<li role="presentation"><a href="#" role="menuitem" tabindex="-1">
+				HTML</a></li>
+				<li role="presentation"><a href="#" role="menuitem" tabindex="-1">
+				CSS</a></li>
+				<li role="presentation"><a href="#" role="menuitem" tabindex="-1">
+				JavaScript</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a href="#" role="menuitem" tabindex="-1">
+				About Us</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
