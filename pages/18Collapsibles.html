@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Collapsibles</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 100px">
+	<div class="container">
+		<h1>Learning Bootstrap Collapsibles</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>Here is link to <a target="_blank" 
+		href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_text.asp">
+		Bootstrap JS Collapse Reference</a> for a complete reference of all collapse
+		options.</p>
+		<p>Collapsibles are great for when you have a lot of content, but only
+		want to show part of it unless the user wants to see more.</p>
+	</div>
+	<div class="container">
+		<h2>Basic Collapsible</h2>
+		<p>To make a collapsible element, add the .collapse class to a collapsible
+		element (such as a div); this is the content that will appear when the
+		collapsible button it clicked.</p> 
+		<p>Add the data-toggle="collapse" attribute to an < a > or 
+		< button > element<p>
+		<p>Then add the data-target="#id" attribute to connect the button with 
+		the collapsible content (for < a > element, put the #id in the href attribute instead):</p>
+		<button type="button" class="btn btn-info" data-toggle="collapse" 
+		data-target="#demo1">Basic Collapsible Button</button>
+		<div id="demo1" class="collapse">
+			Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.
+		</div>
+		<p>Here is an example using an < a > element instead, also with the .in class
+		added to show the content by default:</p>
+		<a href="#demo2" data-toggle="collapse">Basic Collapsible Link</a>
+		<div id="demo2" class="collapse in">
+			I believe that at the end of the century the use of words and general educated opinion will have altered so much that one will be able to speak of machines thinking without expecting to be contradicted.
+		</div>
+	</div>
+	<div class="container">
+		<h2>Collapsible Panel</h2>
+		<p>Put a collapsible inside a panel to make the panel a collapsible:</p>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#demo3">Collapsible Panel</a>
+					</h4>
+				</div>
+				<div id="demo3" class="panel-collapse collapse">
+					<div class="panel-body">Panel Body</div>
+					<div class="panel-footer">Panel Footer</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Collapsibel List Group</h2>
+		<p>Put a collapsible inside a list group for a collapsible list group:</p>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#demo4" data-toggle="collapse">Collapsible List Group</a>
+					</h4>
+				</div>
+				<div class="panel-collapse collapse" id="demo4">
+					<ul class="list-group">
+						<li class="list-group-item">First list item</li>
+						<li class="list-group-item">Second list item</li>
+						<li class="list-group-item">Third list item</li>
+					</ul>
+					<div class="panel-footer">Footer</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Accordion</h2>
+		<p>Combine multiple Collapsibles together to form an accordian that only has one
+		collapsible open at a time:</p>
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#accordion1" data-toggle="collapse" 
+						data-parent="#accordion">Ray Kurzweil quote</a>
+					</h4>
+				</div>
+				<div id="accordion1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<blockquote>
+							<p>By the time we get to the 2040s, we’ll be able to multiply 
+							human intelligence a billionfold. That will be a profound change 
+							that’s singular in nature. Computers are going to keep getting 
+							smaller and smaller. Ultimately, they will go inside our bodies 
+							and brains and make us healthier, make us smarter.</p>
+							<footer>Ray Kurzweil</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#accordion2" data-toggle="collapse" 
+						data-parent="#accordion">Alan Turing quote</a>
+					</h4>
+				</div>
+				<div id="accordion2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<blockquote>
+							<p>A computer would deserve to be called intelligent if it could 
+							deceive a human into believing that it was human.</p>
+							<footer>Alan Turing</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#accordion3" data-toggle="collapse" 
+						data-parent="#accordion">Alan Kay quote</a>
+					</h4>
+				</div>
+				<div id="accordion3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<blockquote>
+							<p>Some people worry that artificial intelligence will make us
+							feel inferior, but then, anybody in his right mind should have
+							an inferiority complex every time he looks at a flower.</p>
+							<footer>Alan Kay</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
