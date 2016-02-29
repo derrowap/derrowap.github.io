@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Tabs and Pills</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 100px">
+	<div class="container">
+		<h1>My First Bootsrap Page</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>Go to <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp">
+			Bootstrap Navigation Reference</a> for all navigation classes.
+		</p>
+		<p>Go to <a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tab.asp">
+			Bootstrap JS Tab Reference</a> for all tab options.
+		</p>
+	</div>
+	<div class="container">
+		<h2>How Boring Websites do Menus</h2>
+		<ul class="list-inline">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>How Better Websites Do Menus: Tabs</h2>
+		<p>Add the .nav and .nav-tabs classes to < ul > element.</p>
+		<p>Add the .active class to the current page for proper styling.</p>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Tabs With Dropdown Menu</h2>
+		<p>Combine Dropdown within a list item to make it a dropdown:</p>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Indiana
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Fort Wayne</a></li>
+					<li><a href="#">Indianapolis</a></li>
+					<li><a href="#">Carmel</a></li>
+					<li><a href="#">Terre Haute</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Florida</a></li>
+			<li><a href="#">California</a></li>
+			<li><a href="#">Texas</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Pills</h2>
+		<p>The same thing as tabs, only visually different.</p>
+		<p>Add .nav and .nav-pills classes to < ul > element:</p>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Vertical Pills</h2>
+		<p>Add the .nav-stacked class to < ul > element to make them vertical:</p>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Menu 1</a></li>
+			<li><a href="#">Menu 2</a></li>
+			<li><a href="#">Menu 3</a></li>
+			<li><a href="#">Menu 4</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Pills With Dropdown Menu</h2>
+		<p>Make the Dropdown on a list item to make a dropdown menu:</p>
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Indiana
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Fort Wayne</a></li>
+					<li><a href="#">Indianapolis</a></li>
+					<li><a href="#">Carmel</a></li>
+					<li><a href="#">Terre Haute</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Florida</a></li>
+			<li><a href="#">California</a></li>
+			<li><a href="#">Texas</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Centered Tabs and Pills</h2>
+		<p>Add the .nav-justified class to center/justify tabs and pills. If the screen
+		is not wide enough, it will stack the elements instead:</p>
+		<ul class="nav nav-tabs nav-justified" style="margin-bottom:40px">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Indiana
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Fort Wayne</a></li>
+					<li><a href="#">Indianapolis</a></li>
+					<li><a href="#">Carmel</a></li>
+					<li><a href="#">Terre Haute</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Florida</a></li>
+			<li><a href="#">California</a></li>
+			<li><a href="#">Texas</a></li>
+		</ul>
+		<ul class="nav nav-pills nav-justified">
+			<li class="active"><a href="#">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Indiana
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Fort Wayne</a></li>
+					<li><a href="#">Indianapolis</a></li>
+					<li><a href="#">Carmel</a></li>
+					<li><a href="#">Terre Haute</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Florida</a></li>
+			<li><a href="#">California</a></li>
+			<li><a href="#">Texas</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h2>Toggleable / Dynamic Tab and Pills</h2>
+		<p>Add data-toggle="tab" attribute to each link to make tab toggleable.</p>
+		<p>Then add .tab-pane class with unique id to each tab wrap inside a < div > element
+		with class .tab-content.</p>
+		<p>Add .fade class to < div > tab-pane element to fade the tabs when clicked:</p>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#ray1" data-toggle="tab">Ray Kurzweil</a></li>
+			<li><a href="#turing1" data-toggle="tab">Alan Turing</a></li>
+			<li><a href="#kay1" data-toggle="tab">Alan Kay</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="ray1" class="tab-pane fade in active">
+				<blockquote>
+					<p>By the time we get to the 2040s, we’ll be able to multiply 
+					human intelligence a billionfold. That will be a profound change 
+					that’s singular in nature. Computers are going to keep getting 
+					smaller and smaller. Ultimately, they will go inside our bodies 
+					and brains and make us healthier, make us smarter.</p>
+					<footer>Ray Kurzweil</footer>
+				</blockquote>
+			</div>
+			<div id="turing1" class="tab-pane fade">
+				<blockquote>
+					<p>A computer would deserve to be called intelligent if it could 
+					deceive a human into believing that it was human.</p>
+					<footer>Alan Turing</footer>
+				</blockquote>
+			</div>
+			<div id="kay1" class="tab-pane fade">
+				<blockquote>
+					<p>Some people worry that artificial intelligence will make us
+					feel inferior, but then, anybody in his right mind should have
+					an inferiority complex every time he looks at a flower.</p>
+					<footer>Alan Kay</footer>
+				</blockquote>
+			</div>
+		</div>
+		<p>It is the same for pills, only change to data-toggle="pill":</p>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#ray2" data-toggle="pill">Ray Kurzweil</a></li>
+			<li><a href="#turing2" data-toggle="pill">Alan Turing</a></li>
+			<li><a href="#kay2" data-toggle="pill">Alan Kay</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="ray2" class="tab-pane fade in active">
+				<blockquote>
+					<p>By the time we get to the 2040s, we’ll be able to multiply 
+					human intelligence a billionfold. That will be a profound change 
+					that’s singular in nature. Computers are going to keep getting 
+					smaller and smaller. Ultimately, they will go inside our bodies 
+					and brains and make us healthier, make us smarter.</p>
+					<footer>Ray Kurzweil</footer>
+				</blockquote>
+			</div>
+			<div id="turing2" class="tab-pane fade">
+				<blockquote>
+					<p>A computer would deserve to be called intelligent if it could 
+					deceive a human into believing that it was human.</p>
+					<footer>Alan Turing</footer>
+				</blockquote>
+			</div>
+			<div id="kay2" class="tab-pane fade">
+				<blockquote>
+					<p>Some people worry that artificial intelligence will make us
+					feel inferior, but then, anybody in his right mind should have
+					an inferiority complex every time he looks at a flower.</p>
+					<footer>Alan Kay</footer>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
