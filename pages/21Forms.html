@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Forms</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 100px">
+	<div class="container">
+		<h1>Learning Bootstrap Forms</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>Bootstrap automatically styles all elements with &ltinput&gt, &lttextarea&gt, and
+		< select> with <code>.form-control</code> class has a width of 100%.</p>
+		<p>The three types of form layouts are Veritcal (default), horizontal, and inline.</p>
+		<p>
+			ALWAYS:
+			<ul>
+				<li>Always use <code>&ltform role="form"&gt</code> to help people who use 
+				screen readers.</li>
+				<li>Wrap labels and form controls in <code>&ltdiv class="form-group"&gt</code>
+				to give it optimum spacing</li>
+				<li>Add <code>.form-control</code> class to all &ltinput&gt, &lttextarea&gt, 
+				and &ltselect&gt elements.</li>
+			</ul>
+		</p>
+	</div>
+	<div class="container">
+		<h2>Vertical Form (default)</h2>
+		<form role="form">
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" id="pwd" 
+				placeholder="Enter password">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+	<div class="container">
+		<h2>Inline Form</h2>
+		<p>Add the <code>.form-inline</code> class to the &ltform&gt element. All elements
+		will be inline, left-aligned, and the laebls are alongside:</p>
+		<form role="form" class="form-inline">
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" id="pwd" 
+				placeholder="Enter password">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<p style="padding-top: 20px; padding-bottom: 20px">Add <code>.sr-only</code> 
+		class to labels to hide them for all devices except screen readers:</p>
+		<form role="form" class="form-inline">
+			<div class="form-group">
+				<label for="email" class="sr-only">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="pwd" class="sr-only">Password:</label>
+				<input type="password" class="form-control" id="pwd" 
+				placeholder="Enter password">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+	<div class="container">
+		<h2>Horizontal Form</h2>
+		<p>Add <code>.form-horizontal</code> to all <code>&ltform&gt</code> elements.</p>
+		<p>Add <code>.control-label</code> to all <col>&ltlabel&gt</col> elements.</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-xs-2" for="email">Email:</label>
+				<div class="col-xs-10">
+					<input type="email" class="form-control" id="email" 
+					placeholder="Enter email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2" for="pwd">Password:</label>
+				<div class="col-xs-10">
+					<input type="password" class="form-control" id="pwd" 
+					placeholder="Enter password:">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-offset-2 col-xs-10">
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
