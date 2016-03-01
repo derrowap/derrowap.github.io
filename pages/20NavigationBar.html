@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Navigation Bar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 150px; padding-top: 50px">
+	<div class="container">
+		<h1>Learning Bootstrap Navigation Bars</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>Typical Navigation Bars are placed at the top of the page</p>
+	</div>
+	<div class="container">
+		<h2>Basic Navigation Bar</h2>
+		<p>Add <code>< nav class="navbar navbar-default"></code> to create one:</p>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+					<li><a href="#">Page 3</a></li>
+					<li><a href="#">Page 4</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h2>Inverted Navigation Bar</h2>
+		<p>Simply change <code>.navbar-default</code> class to <code>.navbar-inverse</code>:
+		</p>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+					<li><a href="#">Page 3</a></li>
+					<li><a href="#">Page 4</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h2>Fixed Navigation Bar</h2>
+		<p>A fixed navigation bar will stay at the top (or bottom) independent of page 
+		scrolling.</p>
+		<p>Add <code>.navbar-fixed-top</code> class to < nav> element to get the
+		navigation bar that is at the top of this screen.</p>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page 1</a></li>
+						<li><a href="#">Page 2</a></li>
+						<li><a href="#">Page 3</a></li>
+						<li><a href="#">Page 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<p>Change <code>.navbar-fixed-top</code> to <code>.navbar-fixed-bottom</code>
+		to get the navigation bar that is fixed at the bottom of this screen.</p>
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar2">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page 1</a></li>
+						<li><a href="#">Page 2</a></li>
+						<li><a href="#">Page 3</a></li>
+						<li><a href="#">Page 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h2>Navigation Bar With Dropdown</h2>
+		<p>Add the <code>.dropdown</code> class to a list item in the navigation bar to 
+		make it a dropdown:</p>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Indiana
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="$">Fort Wayne</a></li>
+							<li><a href="$">Terre Haute</a></li>
+							<li><a href="$">Carmel</a></li>
+							<li><a href="$">Indianapolis</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Floride</a></li>
+					<li><a href="#">California</a></li>
+					<li><a href="#">New York</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h2>Right-Aligned Navigation Bar</h2>
+		<p>Add the <code>.navbar-right</code> class to a < ul> elemenet to make it 
+		right-aligned:</p>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Page 1</a></li>
+					<li><a href="#">Page 2</a></li>
+					<li><a href="#">Page 3</a></li>
+					<li><a href="#">Page 4</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up
+					</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login
+					</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<h2>Collapsing the Navigation Bar</h2>
+		<p>If the navigation bar takes up too much space because the screen isn't large
+		enough, you can set it to collapse automatically only in that case:</p>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar3">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Web Site Name</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar3">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page 1</a></li>
+						<li><a href="#">Page 2</a></li>
+						<li><a href="#">Page 3</a></li>
+						<li><a href="#">Page 4</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up
+					</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login
+					</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</body>
+
+</html>
