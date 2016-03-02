@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Inputs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	</script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body style="padding-bottom: 100px">
+	<div class="container">
+		<h1>Learning Bootstrap Inputs</h1>
+		<p>Go back to <a href="http://derrowap.github.io/index.html">
+		Table of Contents</a>.</p>
+		<p>
+			Bootstrap form controls:
+			<ul>
+				<li>input</li>
+				<li>textarea</li>
+				<li>chechbox</li>
+				<li>radio</li>
+				<li>select</li>
+			</ul>
+		</p>
+		<p>
+			The following input types must be properly declared to be fully styled:
+			<ul>
+				<li>text</li>
+				<li>password</li>
+				<li>datetime</li>
+				<li>datetime-local</li>
+				<li>date</li>
+				<li>month</li>
+				<li>time</li>
+				<li>week</li>
+				<li>number</li>
+				<li>email</li>
+				<li>url</li>
+				<li>search</li>
+				<li>tel</li>
+				<li>color</li>
+			</ul>
+		</p>
+	</div>
+	<div class="container">
+		<h2>Text and Password Inputs</h2>
+		<div class="form-group">
+			<label for="usr">Name:</label>
+			<input type="text" class="form-control" id="usr">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="pwd">
+		</div>
+	</div>
+	<div class="container">
+		<h2>Text area</h2>
+		<div class="form-group">
+			<label for="comment">Comment:</label>
+			<textarea class="form-control" rows="5" id="comment"></textarea>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Input Sizing</h2>
+		<p>Set height of input using classes <code>.input-lg</code> and 
+		<code>.input-sm</code>.</p>
+		<p>Set width of input using classes <code>.col-lg-*</code> and
+		<code>.col-sm-*</code> where * is the number.</p>
+		<form role="form">
+			<div class="form-group">
+				<label for="inputlg">Large Input</label>
+				<input class="form-control input-lg" id="inputlg" type="text">
+			</div>
+			<div class="form-group">
+				<label for="inputdefault">Default Input</label>
+				<input class="form-control" id="inputdefault" type="text">
+			</div>
+			<div class="form-group">
+				<label for="inputsm">Small Input</label>
+				<input class="form-control input-sm" id="inputsm" type="text">
+			</div>
+		</form>
+		<form role="form">
+			<div class="form-group">
+				<div class="col-xs-2">
+					<label for="ex1">col-xs-2</label>
+					<input class="form-control" id="ex1" type="text">
+				</div>
+				<div class="col-xs-3">
+					<label for="ex2">col-xs-3</label>
+					<input class="form-control" id="ex2" type="text">
+				</div>
+				<div class="col-xs-7">
+					<label for="ex3">col-xs-7</label>
+					<input class="form-control" id="ex3" type="text">
+				</div>
+			</div>
+		</form>
+		<p style="padding-top: 90px">Add <code>.form-group-*</code> to the 
+		<code>&ltdiv class="form-group"></code>
+		element to size labels and form controls horizontally:</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group form-group-lg">
+				<label class="col-sm-2 control-label" for="lg">form-group-lg</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="lg">
+				</div>
+			</div>
+			<div class="form-group form-group-sm">
+				<label class="col-sm-2 control-label" for="sm">form-group-sm</label>
+				<div class="col-sm-10">
+					<input class="form-control" type="text" id="sm">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<h2>Help Text</h2>
+		<p>Add the <code>.help-block</code> class in a <code>&ltspan></code> element to
+		include help text in forms:</p>
+		<form role="form">
+			<div class="form-group">
+				<label for="pwd">Password:</label>
+				<input type="password" class="form-control" id="pwd" placeholder="Enter Password">
+				<span class="help-block">This is some help text!!! :)</span>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+	<div class="container">
+		<h2>Checkboxes</h2>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">Option 1</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="">Option 2</label>
+		</div>
+		<div class="checkbox disabled">
+			<label>
+				<input type="checkbox" value="" disabled>Option 3</label>
+		</div>
+		<p>Add the <code>.checkbox-inline</code> class to make them in-line:</p>
+		<div class="checkbox">
+			<label class="checkbox-inline">
+				<input type="checkbox" value="">Option 1</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" value="">Option 2</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" value="">Option 3</label>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Radio Buttons</h2>
+		<div class="radio">
+			<label>
+				<input type="radio" name="optradio">Option 1</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="optradio">Option 2</label>
+		</div>
+		<div class="radio disabled">
+			<label>
+				<input type="radio" name="optradio" disabled>Option 3</label>
+		</div>
+		<p>Add the <code>.radio-inline</code> class to make them in-line:</p>
+		<div class="radio">
+			<label class="radio-inline">
+				<input type="radio" name="optradio">Option 1</label>
+			<label class="radio-inline">
+				<input type="radio" name="optradio">Option 1</label>
+			<label class="radio-inline">
+				<input type="radio" name="optradio">Option 1</label>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Select List</h2>
+		<p>Default select list gives a drop-down effect:</p>
+		<div class="form-group">
+			<label for="sel1">Select list:</label>
+			<select class="form-control" id="sel1">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+			</select>
+		</div>
+		<p>Adding 'multiple' to &ltselect> element gives the multiple select list effect:</p>
+		<div class="form-group">
+			<label for="sel2">Select list:</label>
+			<select multiple class="form-control" id="sel2">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+			</select>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Static Control</h2>
+		<p>Insering plain text next to form label, add <code>.form-control-static</code>
+		class to &ltp> element:</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-xs-2" for="email">Email:</label>
+				<div class="col-xs-10">
+					<p class="form-control-static">someone@example.com</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-2" for="pwd">Password:</label>
+				<div class="col-xs-10">
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-offset-2 col-xs-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="container">
+		<h2>Form Control States</h2>
+		<p>
+			<ul>
+				<li>INPUT FOCUS: outline of input is removed and box-shadow is applied
+				on focus.</li>
+				<li>DISABLED INPUTS: Add a <code>disabled</code> attribute to disable an
+				input field.</li>
+				<li>DISABLED FIELDSETS:	Add a <code>disabled</code> attribute to a fieldset
+				to disable all controls within it.</li>
+				<li>READONLY INPUTS: Add a <code>readonly</code> attribute to an input to
+				prevent user input.</li>
+				<li>VALIDATION STATES: Give a validation style to input by adding
+				<code>.has-warning</code>, <code>.has-error</code>, or 
+				<code>.has-success</code> to parent element.</li>
+				<li>ICONS: Add feedback icons with <code>.has-feedback</code> class and an
+				icon.</li>
+				<li>HIDDEN LABELS: Add <code>.sr-only</code> class on non-visible labels</li>
+			</ul>
+		</p>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="col-xs-2 control-label">Focused</label>
+				<div class="col-xs-10">
+					<input class="form-control" id="focusedInput" type="text" value="Click to focus">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword" class="col-xs-2 control-label">Disabled</label>
+				<div class="col-xs-10">
+					<input class="form-control" id="disabledInput" type="text" disabled>
+				</div>
+			</div>
+			<fieldset disabled>
+				<div class="form-group">
+					<label for="disabledTextInput" class="col-xs-2 control-label">
+						Fieldset disabled
+					</label>
+					<div class="col-xs-10">
+						<input type="text" id="disabledTextInput" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="disabledSelect" class="col-xs-2 control-label"></label>
+					<div class="col-xs-10">
+						<select id="disabledSelect" class="form-control">
+							<option>Disabled select</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-group has-success has-feedback">
+				<label class="col-xs-2 control-label" for="inputSuccess">
+					Input with success and icon
+				</label>
+				<div class="col-xs-10">
+					<input type="text" class="form-control" id="inputSuccess">
+					<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				</div>
+			</div>
+			<div class="form-group has-warning has-feedback">
+				<label class="col-xs-2 control-label" for="inputWarning">
+					Input with warning and icon
+				</label>
+				<div class="col-xs-10">
+					<input type="text" class="form-control" id="inputWarning">
+					<span class="glyphicon glyphicon-warning-sign form-control-feedback">
+					</span>
+				</div>
+			</div>
+			<div class="form-group has-error has-feedback">
+				<label class="col-xs-2 control-label" for="inputError">
+					Input with error and icon
+				</label>
+				<div class="col-xs-10">
+					<input type="text" class="form-control" id="inputError">
+					<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="comment">Comment:</label>
+				<textarea class="form-control" rows="5" id="comment" readonly>Read Only!
+				</textarea>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
