@@ -2,117 +2,246 @@
 <html lang="en">
 
 <head>
-	<title>Table Of Contents</title>
+	<title>Austin Derrow-Pinion</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/derrowap.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
 	</script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
 	</script>
+	<!-- scripts for video parallax -->
+	<script type="text/javascript" src="http://rawgit.com/linnett/backgroundVideo/master/backgroundVideo.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#my-video").backgroundVideo({
+			$videoWrap: $('#video-wrap'),
+			$outerWrap: $('#outer-wrap'),
+			preventContextMenu: true,
+			parallax: true,
+			parallaxOptions: {
+				effect: 1.0
+			}
+		});
+	});
+	</script>
 </head>
-<div class="container">
-	<h1>Table of Contents</h1>
-	<h3>Bootstrap Tutorial</h3>
-	<p>
-		This page holds links to all the different pages I have made to learn
-		how to use Bootstrap. I am doing this in order to prepare for making
-		a personal website for blogging and showing off my projects.
-	</p>
-</div>
-<div class="container">
-	<h5>
-		<a href="http://derrowap.github.io/pages/01GetStarted.html">
-		1. Get Started</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/02Grids.html">
-		2. Grids</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/03Text-Typography.html">
-		3. Text-Typography</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/04Tables.html">
-		4. Tables</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/05Images.html">
-		5. Images</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/06Jumbotron-PageHeader.html">
-		6. Jumbotron and Page Header</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/07Wells.html">
-		7. Wells</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/08Alerts.html">
-		8. Alerts</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/09Buttons.html">
-		9. Buttons</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/10ButtonGroups.html">
-		10. Button Groups</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/11Glyphicons.html">
-		11. Glyphicons</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/12Badges-Labels.html">
-		12. Badges and Labels</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/13ProgressBars.html">
-		13. Progress Bars</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/14Pagination.html">
-		14. Pagination</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/15ListGroups.html">
-		15. List Groups</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/16Panels.html">
-		16. Panels</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/17Dropdowns.html">
-		17. Dropdowns</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/18Collapsibles.html">
-		18. Collapsibles</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/19Tabs-Pills.html">
-		19. Tabs and Pills</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/20NavigationBar.html">
-		20. Navigation Bars</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/21Forms.html">
-		21. Forms</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/22Inputs.html">
-		22. Inputs</a>
-	</h5>
-	<h5>
-		<a href="http://derrowap.github.io/pages/23Carousel.html">
-		23. Carousel</a>
-	</h5>
-</div>
+
+<body>
+	<header id="header">
+		<div class="content">
+			<!-- Navigation Bar -->
+			<nav class="navbar navbar-inverse navbar-fixed-top" id="Nav">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand">Austin Derrow-Pinion</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav"></ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact">Contact Me</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- section 1: Home -->
+	<div id="home" class="home">
+		<div id="outer-wrap" style="width: 100%; height: 100%;">
+			<div id="video-wrap">
+				<video id="my-video" preload="metadata" autoplay loop muted>
+					<source src="http://derrowap.github.io/images/typing2.mp4" type="video/mp4">
+				</video>
+				<div class="text-vcenter">
+					<h1>AUSTIN DERROW-PINION</h1>
+					<p>A Computer Science & Software Engineering student at Rose-Hulman Institute of Technology</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /section 1 -->
+	<!-- section 2: About Me -->
+	<div id="about" class="pad-section">
+		<div class="container">
+			<div id="section-header">
+				<h2 class="text-center">ABOUT ME</h2>
+			</div>
+			<div class="row" style="padding-top: 50px">
+				<div class="col-xs-4">
+					<img src="http://derrowap.github.io/images/selfie.jpg" class="img-circle" alt="Selfie">
+				</div>
+				<div class="col-xs-8 text-center jumbotron">
+					<p class="lead">Passionate for technology, motivated for education,
+					working toward the future me. </p>
+					<hr>
+					<p style="font-size: 18px;">I am currently a sophomore at Rose-Hulman 
+					Institute of Technology, studying Computer Science and Software 
+					Engineering. Also currently pursuing minors in Mathematics, Psychology, 
+					and Computational Science. I have a strong interest in artificial 
+					intelligence and software development. I live by the lifestyle of 
+					learning something new every day.
+					</p>
+					<hr>
+					<p style="font-size: 18px;">
+						I grew up in Fort Wayne, IN, I am a coffee lover, my favorite color 
+						is red, and my favorite movie is Ex-Machina. <br>P.S. I like long 
+						walks on the beach.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /section 2 -->
+	<!-- section 3: Portfolio -->
+	<div id="portfolio" class="pad-section">
+		<div class="container">
+			<div id="section-header">
+				<h2 class="text-center">PROJECTS</h2>
+			</div>
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+								<a href="#accordion1" data-toggle="collapse" 
+								data-parent="#accordion">CSSE220: Arcade Game Project</a>
+							</h4>
+					</div>
+					<div id="accordion1" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>UNDER CONSTRUCTION</p>
+							<blockquote>
+								<p>By the time we get to the 2040s, we’ll be able to multiply 
+							human intelligence a billionfold. That will be a profound change 
+							that’s singular in nature. Computers are going to keep getting 
+							smaller and smaller. Ultimately, they will go inside our bodies 
+							and brains and make us healthier, make us smarter.</p>
+								<footer>Ray Kurzweil</footer>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a href="#accordion2" data-toggle="collapse" 
+						data-parent="#accordion">CSSE230: Navigational Map</a>
+					</h4>
+					</div>
+					<div id="accordion2" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>UNDER CONSTRUCTION</p>
+							<blockquote>
+								<p>A computer would deserve to be called intelligent if it could 
+							deceive a human into believing that it was human.</p>
+								<footer>Alan Turing</footer>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a href="#accordion3" data-toggle="collapse" 
+						data-parent="#accordion">CSSE333: Stream</a>
+					</h4>
+					</div>
+					<div id="accordion3" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>UNDER CONSTRUCTION</p>
+							<blockquote>
+								<p>Some people worry that artificial intelligence will make us
+							feel inferior, but then, anybody in his right mind should have
+							an inferiority complex every time he looks at a flower.</p>
+								<footer>Alan Kay</footer>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a href="#accordion3" data-toggle="collapse" 
+						data-parent="#accordion">Hero Chrome Extension</a>
+					</h4>
+					</div>
+					<div id="accordion3" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>UNDER CONSTRUCTION</p>
+							<blockquote>
+								<p>Some people worry that artificial intelligence will make us
+							feel inferior, but then, anybody in his right mind should have
+							an inferiority complex every time he looks at a flower.</p>
+								<footer>Alan Kay</footer>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /section 3 -->
+	<!-- section 4: Contact Me -->
+	<div id="contact" class="pad-section">
+		<div class="container">
+			<div id="section-header">
+				<h2 class="text-center">CONTACT ME</h2>
+			</div>
+			<h4 style="color: white">LinkedIn: </h4>
+			<a href="https://www.linkedin.com/pub/austin-derrow-pinion/b1/368/222">
+				<img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" style="width:160px; height:33px" border="0" alt="View Austin Derrow-Pinion's profile on LinkedIn">
+			</a>
+			<hr>
+			<h4 style="color: white">GitHub: </h4><a class="github-button" href="https://github.com/derrowap" data-style="mega" aria-label="Follow @derrowap on GitHub">Follow @derrowap</a>
+			<hr>
+			<h4 style="color: white">Email: </h4><a href="mailto:derrowap@rose-hulman.edu" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-envelope"> Rose-Hulman</span></a>
+			<hr>
+			<div class="panel-group">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+						<a data-toggle="collapse" href="#myResume">Resume</a>
+					</h4>
+					</div>
+					<div id="myResume" class="panel-collapse collapse">
+						<object type="application/pdf" data="http://derrowap.github.io/images/Resume.pdf" width="100%" height="800px">
+						<a href="http://derrowap.github.io/images/Resume.pdf" alt="My Resume"></object>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+			<!-- <div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Resume</h4>
+						</div>
+						<div class="modal-body">
+							<object type="application/pdf" data="http://derrowap.github.io/images/Resume.pdf" width="90%" height="90%">
+								<a href="http://derrowap.github.io/images/Resume.pdf" alt="My Resume"></object>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<!-- Github button -->
+			<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+		</div>
+	</div>
+	</div>
+	<!-- /section 4 -->
+</body>
 
 </html>

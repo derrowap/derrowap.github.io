@@ -13,29 +13,22 @@ html, body {
 	width: 100%;
 }
 
-#Nav a {
-	color: red;
+#Nav {
+	opacity: 0.8;
 }
 
-/* verical-centered text */
-.text-vcenter {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
+#Nav a {
 	color: red;
-	font-weight: 600;
+	font-weight: bold;
 }
-.text-vcenter h1 {
-	font-size: 4.5em;
-	font-weight: 700;
-	margin: 0;
-	padding: 0;
+
+.jumbotron {
+	opacity: 0.8;
 }
 
 /* main page sections */
 #home {
-	background: no-repeat center center fixed;
-	display: table;
+	padding-top: 50px; /* Nav bar at top takes up this space */
 	height: 100%;
 	position: relative;
 	width: 100%;
@@ -44,36 +37,38 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-.fullscreen-bg {
-	position: scroll;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: 0;
+
+/* verical-centered text */
+.text-vcenter {
+	position: relative;
+	/*display: table-cell;*/
+	text-align: center;
+	top: 300px;
+	color: red;
+	font-weight: 600;
+	z-index: 20;
+}
+.text-vcenter h1 {
+	font-size: 4.5em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
 }
 
-.fullscreen-bg_video {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: auto;
-	height: auto;
-	min-width: 100%;
-	min-height: 100%
-	-webkit-transform: translate(-50%, -50%);
- 	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+#about { 
+	background: url("http://derrowap.github.io/images/fort-wayne.jpg") no-repeat center center fixed;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
-#about { height: 800px; }
 
 #portfolio {
-	background: no-repeat center center fixed;
-	display: table;
-	height: 800px;
+	background: url("http://derrowap.github.io/images/galaxy.jpg") no-repeat center center fixed;
+	height: 100%;
 	width: 100%;
 	position: relative;
 	-webkit-background-size: cover;
@@ -83,5 +78,22 @@ html, body {
 }
 
 #contact {
-	height: 800px;
+	height: 100%;
 }
+
+#section-header {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: black;
+	color:red;
+	opacity: 0.8;
+}
+
+#section-header h2 {
+	padding-bottom: 10px;
+}
+
+#accordion {
+	padding-top: 50px
+}
+.modal { top:5%; bottom:5%; } .modal-body { max-height:100%; height:800px; }
