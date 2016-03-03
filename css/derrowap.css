@@ -28,7 +28,7 @@ html, body {
 .text-vcenter {
 	position: relative;
 	text-align: center;
-	top: 35%;
+	top: 30%;
 	color: red;
 	z-index: 20;
 }
