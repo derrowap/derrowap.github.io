@@ -65,7 +65,7 @@ html, body {
 #home {
 	background-repeat: no-repeat;
 	background-position: center center;
-	background: fixed;
+	background-attachment: fixed;
 	padding-top: 50px; /* Nav bar at top takes up this space */
 	height: 100%;
 	display: inline-block;
