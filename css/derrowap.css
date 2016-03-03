@@ -44,7 +44,7 @@ html, body {
 
 /* About me description */
 .jumbotron {
-	opacity: 0.9;
+	opacity: 0.8;
 	background-color: black;
 	color: white;
 }
@@ -53,6 +53,13 @@ html, body {
 #accordion {
 	padding-top: 50px;
 }
+.panel .panel-heading {
+	text-align: center;
+	color: white;
+	background-color: black;
+	opacity: 0.8;
+}
+
 
 /* main page sections */
 #home {
@@ -112,7 +119,7 @@ html, body {
 	font-family: "Raleway Light";
 	src: url("raleway-light-webfont.eot?") format("eot"), url("raleway-light-webfont.woff") format("woff"), url("raleway-light-webfont.ttf") format("truetype");
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
 	font-family: "Raleway Light";
 }
 p, span, div {
