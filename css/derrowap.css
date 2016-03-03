@@ -22,6 +22,8 @@ html, body {
 	color: red;
 	font-weight: bold;
 }
+
+/* by default on devices with large screens */
 #backup-image { display: none; }
 
 /* verical-centered text on Home page */
@@ -69,6 +71,7 @@ html, body {
 	display: inline-block;
 	position: relative;
 	width: 100%;
+	overflow: hidden;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -92,7 +95,7 @@ html, body {
 	min-height: 100%;
 	width: 100%;
 	bottom: 10px;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
@@ -132,7 +135,7 @@ p, span, div {
 	font-weight: 900;
 }
 
-/* tiny screen devices */
+/* small screen devices */
 @media (max-height: 800px) {
 	#home video { display: none; }
 	#backup-image {
@@ -140,7 +143,7 @@ p, span, div {
 		position: absolute;
 		overflow: hidden;
 		top: -200px;
-		zoom: 100%
+		zoom: 100%;
 		margin: auto;
 	}
 	#about .jumbotron { zoom: 75%; }
