@@ -18,15 +18,11 @@ html, body {
 	opacity: 0.9;
 	font-size: 1.2em;
 }
-
 #Nav a {
 	color: red;
 	font-weight: bold;
 }
-
-@media (max-height: 800px) {
-	video { display: none; }
-}
+#backup-image { display: none; }
 
 /* verical-centered text on Home page */
 .text-vcenter {
@@ -83,18 +79,20 @@ html, body {
 	min-height: 100%;
 	width: 100%;
 	bottom: 5px;
+	overflow: hidden;
 	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
+}	
 #portfolio {
 	background: url("http://derrowap.github.io/images/galaxy.jpg") no-repeat center center fixed;
 	min-height: 100%;
 	width: 100%;
-	bottom: 5px;
+	bottom: 10px;
+	/*overflow: hidden;*/
 	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
@@ -132,4 +130,20 @@ h1, h2, h3, h4, h5, h6, a {
 p, span, div {
 	font-family: "Raleway Light";
 	font-weight: 900;
+}
+
+/* tiny screen devices */
+@media (max-height: 800px) {
+	#home video { display: none; }
+	#backup-image {
+		display: inline-block;
+		position: absolute;
+		overflow: hidden;
+		top: -200px;
+		zoom: 100%
+		margin: auto;
+	}
+	#about .jumbotron { zoom: 75%; }
+	.text-vcenter { zoom: 85%; top: 20%; }
+	#section-header h1 { zoom: 80%;}
 }
