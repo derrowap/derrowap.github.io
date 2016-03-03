@@ -13,8 +13,10 @@ html, body {
 	width: 100%;
 }
 
+/* Navigation bar */
 #Nav {
-	opacity: 0.8;
+	opacity: 0.9;
+	font-size: 1.2em;
 }
 
 #Nav a {
@@ -22,8 +24,34 @@ html, body {
 	font-weight: bold;
 }
 
+/* verical-centered text on Home page */
+.text-vcenter {
+	position: relative;
+	text-align: center;
+	top: 35%;
+	color: red;
+	z-index: 20;
+}
+.text-vcenter h1 {
+	font-size: 4.5em;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
+.text-vcenter p {
+	font-size: 1.1em;
+}
+
+/* About me description */
 .jumbotron {
-	opacity: 0.8;
+	opacity: 0.9;
+	background-color: black;
+	color: white;
+}
+
+/* Project Panels */
+#accordion {
+	padding-top: 50px;
 }
 
 /* main page sections */
@@ -37,63 +65,55 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-
-/* verical-centered text */
-.text-vcenter {
-	position: relative;
-	/*display: table-cell;*/
-	text-align: center;
-	top: 300px;
-	color: red;
-	font-weight: 600;
-	z-index: 20;
-}
-.text-vcenter h1 {
-	font-size: 4.5em;
-	font-weight: 700;
-	margin: 0;
-	padding: 0;
-}
-
 #about { 
 	background: url("http://derrowap.github.io/images/fort-wayne.jpg") no-repeat center center fixed;
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
+	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-
 #portfolio {
 	background: url("http://derrowap.github.io/images/galaxy.jpg") no-repeat center center fixed;
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
+	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-
 #contact {
-	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	display: inline-block;
+	position: relative;
 }
 
+/* Section Headers */
 #section-header {
-	padding-top: 3px;
-	padding-bottom: 3px;
 	background-color: black;
 	color:red;
 	opacity: 0.8;
+	border: 2px solid red;
 }
-
 #section-header h2 {
 	padding-bottom: 10px;
 }
 
-#accordion {
-	padding-top: 50px
+/* Setting fonts */
+@font-face {
+	font-family: "Raleway Light";
+	src: url("raleway-light-webfont.eot?") format("eot"), url("raleway-light-webfont.woff") format("woff"), url("raleway-light-webfont.ttf") format("truetype");
 }
-.modal { top:5%; bottom:5%; } .modal-body { max-height:100%; height:800px; }
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway Light";
+}
+p, span, div {
+	font-family: "Raleway Light";
+	font-weight: 900;
+}
