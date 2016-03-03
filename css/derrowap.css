@@ -63,7 +63,7 @@ html, body {
 
 /* main page sections */
 #home {
-	background: url("http://derrowap.github.io/images/cities.jpg") no-repeat center center fixed;
+	/*background: url("http://derrowap.github.io/images/cities.jpg") no-repeat center center fixed;*/
 	padding-top: 50px; /* Nav bar at top takes up this space */
 	height: 100%;
 	display: inline-block;
@@ -74,10 +74,15 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-#about { 
+/*#home img {
+	position: relative;
+	bottom: 1px; 
+}
+*/#about { 
 	background: url("http://derrowap.github.io/images/fort-wayne.jpg") no-repeat center center fixed;
 	min-height: 100%;
 	width: 100%;
+	bottom: 5px;
 	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
@@ -89,6 +94,7 @@ html, body {
 	background: url("http://derrowap.github.io/images/galaxy.jpg") no-repeat center center fixed;
 	min-height: 100%;
 	width: 100%;
+	bottom: 5px;
 	display: inline-block;
 	position: relative;
 	-webkit-background-size: cover;
@@ -99,6 +105,7 @@ html, body {
 #contact {
 	min-height: 100%;
 	width: 100%;
+	bottom: 5px;
 	display: inline-block;
 	position: relative;
 }
