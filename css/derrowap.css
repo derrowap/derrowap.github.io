@@ -24,6 +24,10 @@ html, body {
 	font-weight: bold;
 }
 
+@media (max-height: 800px) {
+	video { display: none; }
+}
+
 /* verical-centered text on Home page */
 .text-vcenter {
 	position: relative;
@@ -74,11 +78,7 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-/*#home img {
-	position: relative;
-	bottom: 1px; 
-}
-*/#about { 
+#about { 
 	background: url("http://derrowap.github.io/images/fort-wayne.jpg") no-repeat center center fixed;
 	min-height: 100%;
 	width: 100%;
