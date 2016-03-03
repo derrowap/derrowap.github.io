@@ -59,6 +59,7 @@ html, body {
 	background: url("http://derrowap.github.io/images/cities.jpg") no-repeat center center fixed;
 	padding-top: 50px; /* Nav bar at top takes up this space */
 	height: 100%;
+	display: inline-block;
 	position: relative;
 	width: 100%;
 	-webkit-background-size: cover;
