@@ -16,12 +16,12 @@
 			</ul>
 		</li>
 		<li>
-			Navigation Bar has "Home" as always active. Use JS to toggle which
-			is active based on scrolling.
+			<del>Navigation Bar has "Home" as always active. Use JS to toggle which
+			is active based on scrolling.</del>
 		</li>
 		<li>
-			When using a collapsed Navigation Bar that shows a dropdown, when
-			clicked on, the drop down stays there, make this go away.
+			<del>When using a collapsed Navigation Bar that shows a dropdown, when
+			clicked on, the drop down stays there, make this go away.</del>
 		</li>
 		<li>
 			<del>Give link to resume on linked in if embedded resume can't open</del>
