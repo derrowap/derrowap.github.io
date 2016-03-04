@@ -11,7 +11,7 @@
 			<ul>
 				<li><del>CSSE220 Arcade Game</del></li>
 				<li><del>CSSE230 Navigational Map</del></li>
-				<li>CSSE333 Stream</li>
+				<li><del>CSSE333 Stream</del></li>
 				<li><del>Hero Chrome Extension</del></li>
 			</ul>
 		</li>

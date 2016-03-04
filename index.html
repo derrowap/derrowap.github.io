@@ -17,6 +17,12 @@ of my experience and talents.
 	<title>Austin Derrow-Pinion</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- To make facebook sharing look nice -->
+	<meta property="og:url" content="http://derrow-pinion.com" />
+	<meta property="og:title" content="Austin Derrow-Pinion" />
+	<meta property="og:description" content="A portfolio website programmed by me to showcase my projects and talents." />
+	<meta property="og:image" content="http://derrowap.github.io/images/selfie.jpg" />
+	<!-- /facebook data -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://derrowap.github.io/css/derrowap.css">
 	<!-- <link rel="stylesheet" href="C:/Users/Austin/Documents/GitHub/derrowap.github.io/css/derrowap.css"> -->
@@ -141,7 +147,8 @@ of my experience and talents.
 					<div id="accordion1" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
-								My <a href="https://github.com/derrowap/CSSE220-ArcadeGameProject.git" target="_blank">CSSE220 Arcade Game</a> Project
+								My CSSE220 Object Oriented Programming 
+								<a href="https://github.com/derrowap/CSSE220-ArcadeGameProject.git" target="_blank">Arcade Game</a> Project
 								was the second project I had completed as a Rose-Hulman student. Developed in the winter quarter of my
 								freshman year, this was a huge learning experience. The graphics are not very pretty, but as a group,
 								we tried to make the best of it. The project idea was created by Rose-Hulman professors, but was inspired
@@ -198,7 +205,8 @@ of my experience and talents.
 					<div id="accordion2" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
-								My <a href="https://github.com/derrowap/FinalProjectCSSE230.git">CSSE230 Navigational Map</a> Project was a school project
+								My CSSE230 Data Structures and Analysis of Algorithms 
+								<a href="https://github.com/derrowap/FinalProjectCSSE230.git">Navigational Map</a> Project was a school project
 								completed during my Sophomore year winter quarter as a student at Rose-Hulman. The project idea was created by my professor
 								with a set number of required features. As a group, we decided on implementing several other features to go beyond the
 								requirements. It was our job to come up with proper data structures and algorithms in order to implement the
@@ -263,12 +271,46 @@ of my experience and talents.
 					<div id="accordion3" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>UNDER CONSTRUCTION</p>
-							<blockquote>
-								<p>Some people worry that artificial intelligence will make us
-							feel inferior, but then, anybody in his right mind should have
-							an inferiority complex every time he looks at a flower.</p>
-								<footer>Alan Kay</footer>
-							</blockquote>
+							<p>
+								My CSSE333 Databse Systems <a href="https://github.com/derrowap/StreamTeam">Stream</a> Project is an Android application built
+								using Android Studio. My group consisted of Kice Sanders and myself. We used Microsoft SQL Server 2014 Management Studio to build the database used 
+								in the application. We were a three person group initially. With this arsenal ready to start, we projected a project that turned out to be too much
+								work for a couple reasons. We set out to make an android application that combines the features of Facebook and Twitter into one.
+								<hr>Features include:
+								<ul>
+									<li>Users can create an account with Stream and sign in with Facebook.</li>
+									<li>With these accounts, the user can add friends within the Stream app, then message and view their profiles.</li>
+									<li>Users can also add someone to their ignore list so that their name does not come up when either one of them search for each other.</li>
+									<li>Users are able to message with response time nearly instant. This is because all tables in the database are indexed properly for
+									efficieny.</li>
+									<li>All of this data is stored in a database, therefore security issues arise, but we made sure they were fixed:</li>
+									<ul>
+										<li>SQL Injection does not work.</li>
+										<li>All communication between the Android application and the database was executed through stored procedures.</li>
+										<li>By only allowing stored procedures, it prevents any malicious users from retrieving information about the database.</li>
+										<li>Users only have access to data they should be allowed to, such as their friends, possible users to add as friends or
+										to put on their ignore list, messages between themselves and other users, and their own profile information.</li>
+										<li>Passwords were required to be at least 5 characters long with at least one alphabetical character and one number.</li>
+									</ul>
+								</ul>
+								<hr>Database details include:
+								<ul>
+									<li>All tables have proper primary keys set.</li>
+									<li>Referential integrity is maintained through foreign key constraints.</li>
+									<li>At least one clustered index or non-Clustered index is on every table based on how the table is used (in order to keep
+									maximum efficiency).</li>
+									<li>Stored procedures are implemented for every functionality aspect of the database for the Android application to use.</li>
+									<li>Views are created to aid in speed of accessing data in stored procedures and to maintain security by not giving access
+									to other data from the other tables.</li>
+									<li>Triggers are implemented to toggle between which picture the user wants to select to be viewed. A bit is stored with each
+									social media page an account is linked to. If this bit is '1', then the picture that goes along with the profile is set to be
+									their profile picture, viewable by their friends. If a different picture for that same user is ever set to '1', this trigger
+									will fire and ensure all of the other pictures are set to '0' to avoid confusion and false data.</li>
+								</ul>
+								<hr>Here is the <a href="">open source code</a> provided on GitHub. You can download the application, but will not be able to
+								see any data unless on the Rose-Hulman network because that is where the database is hosted unfortunately.
+								<br>UNDER CONSTRUCTION: expect a video demonstration in the future to be here.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -284,9 +326,10 @@ of my experience and talents.
 					<div id="accordion4" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
-								<a href="">Hero</a> is a Chrome Extension developed by <a href="http://www.bliudzius.com">Paul Bliudzius</a> and I over the summer of 2015. This was a learning experience for me because it was the first form of any web development I have ever done. Previously,
-								I had little knowledge about HTML, JavaScript, and CSS, but after developing that (and this website), I have learned a lot about
-								web development.
+								<a href="https://chrome.google.com/webstore/detail/mhlonolhbkbhhaegfpglcgecmbpdhjcc/">Hero</a> is a Chrome Extension developed by 
+								<a href="http://www.bliudzius.com">Paul Bliudzius</a> and I over the summer of 2015. This was a learning experience for me because 
+								it was the first form of any web development I have ever done. Previously, I had little knowledge about HTML, JavaScript, and CSS, 
+								but after developing that (and this website), I have learned a lot about web development.
 								<hr>Features include:
 								<ul>
 									<li>Reading reviews created by other users who use Hero</li>
@@ -350,12 +393,15 @@ of my experience and talents.
 							here is a direct link</a>.
 						</div>
 						<div class="panel-footer">
-							<iframe src="https://drive.google.com/file/d/0B12puriMRIDgR2RfZnUxay1jZGs/preview" style="width:100%; height:70em" ></iframe>
+							<iframe src="https://drive.google.com/file/d/0B12puriMRIDgR2RfZnUxay1jZGs/preview" style="width:100%; height:70em"></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- /Resume -->
+			<div id="page-footer">
+				<a href="https://github.com/derrowap/derrowap.github.io" target="_blank"><h3>Open source website programmed by Austin Derrow-Pinion</h3></a>
+			</div>
 			<!-- Github button -->
 			<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 		</div>
