@@ -52,15 +52,15 @@
 						</ul>
 					</div>
 				</div>
-			</nav> <!-- /Navigation Bar -->
+			</nav>
+			<!-- /Navigation Bar -->
 		</div>
 	</header>
 	<!-- section 1: Home -->
 	<div id="home" class="home">
 		<div id="outer-wrap" style="width: 100%; height: 100%;">
-		<img src="http://derrowap.github.io/images/cities.jpg" id="backup-image">
+			<img src="http://derrowap.github.io/images/cities.jpg" id="backup-image">
 			<div id="video-wrap">
-
 				<video id="my-video" preload="none" autoplay loop muted>
 					<source src="http://derrowap.github.io/images/typing2.mp4" type="video/mp4">
 				</video>
@@ -70,7 +70,8 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- /section 1 -->
+	</div>
+	<!-- /section 1 -->
 	<!-- section 2: About Me -->
 	<div id="about" class="pad-section">
 		<div class="container">
@@ -83,15 +84,18 @@
 				</div>
 				<!-- About me description -->
 				<div class="col-xs-8 text-center jumbotron">
-					<p class="lead">Passionate for technology, motivated for education,
-					working toward the future me. </p>
+					<p class="lead">
+						Passionate for technology, a strong motivation for education,
+						working toward the future me.
+					</p>
 					<hr>
-					<p style="font-size: 18px;">I am currently a sophomore at Rose-Hulman 
-					Institute of Technology, studying Computer Science and Software 
-					Engineering. Also currently pursuing minors in Mathematics, Psychology, 
-					and Computational Science. I have a strong interest in artificial 
-					intelligence and software development. I live by the lifestyle of 
-					learning something new every day.
+					<p style="font-size: 18px;">
+						I am currently a sophomore at Rose-Hulman 
+						Institute of Technology, studying Computer Science and Software 
+						Engineering. Also currently pursuing minors in Mathematics, Psychology, 
+						and Computational Science. I have a strong interest in artificial 
+						intelligence and software development. With data doubling every two years,
+						I make it a point to learn something new every day.
 					</p>
 					<hr>
 					<p style="font-size: 18px;">
@@ -99,10 +103,12 @@
 						is red, and my favorite movie is Ex-Machina. <br>P.S. I like long 
 						walks on the beach.
 					</p>
-				</div> <!-- /About me description -->
+				</div>
+				<!-- /About me description -->
 			</div>
 		</div>
-	</div> <!-- /section 2 -->
+	</div>
+	<!-- /section 2 -->
 	<!-- section 3: Portfolio -->
 	<div id="portfolio" class="pad-section">
 		<div class="container">
@@ -120,18 +126,53 @@
 					</div>
 					<div id="accordion1" class="panel-collapse collapse">
 						<div class="panel-body">
-							<p>UNDER CONSTRUCTION</p>
-							<blockquote>
-								<p>By the time we get to the 2040s, we’ll be able to multiply 
-							human intelligence a billionfold. That will be a profound change 
-							that’s singular in nature. Computers are going to keep getting 
-							smaller and smaller. Ultimately, they will go inside our bodies 
-							and brains and make us healthier, make us smarter.</p>
-								<footer>Ray Kurzweil</footer>
-							</blockquote>
+							<p>
+								My <a href="https://github.com/derrowap/CSSE220-ArcadeGameProject.git" target="_blank">CSSE220 Arcade Game</a> Project
+								was the second project I had completed as a Rose-Hulman student. Developed in the winter quarter of my
+								freshman year, this was a huge learning experience. The graphics are not very pretty, but as a group,
+								we tried to make the best of it. The project idea was created by Rose-Hulman professors, but was inspired
+								by a well known game, Dig Dug. <hr>Features include:
+								<ul>
+									<li>Hero (the user, Shrek), is controlled using the arrow keys</li>
+									<li>To progress to the next level, the user must collect all of the onions on the map</li>
+									<li>While the user plays through a level, two different monsters will attack</li>
+									<ul>
+										<li>Nobbin: spawns continuously at a spot in the map (max number of monsters is 2 + the current level).
+										This monster cannot dig through the dirt, therefore we wrote an algorithm to find the shortest path
+										from its current position to the hero through the already created tunnels. This monster also randomly
+										changes into a 'Hobbin' monster and then turns back to normal after a certain amount of time.
+										Graphically is Lord Farquaad, from Shrek.</li>
+										<li>Hobbin: digs through the dirt, ignoring tunnels, to get to the user in the quickest
+										possible route. Graphically is Dragon, from Shrek.</li>
+									</ul>
+									<li>Hero can shoot a ginger bread cookie (using the space button) at monsters to eliminate them</li>
+									<li>Money bags (Donkey from shrek) can be dropped if there is an empty space underneath. If the
+									bag drops more than one square, it will burst open and turn into Princess Fiona (also from Shrek).
+									At this point, Princess Fiona can be saved by the Hero (Shrek) from the evil monsters to gain more
+									points. If a money bag ever collides with a monster or the Hero, they will be eliminated.</li>
+									<li>The Hero (Shrek) has only 3 lives to get through the game. If at any point the lives run out,
+									the user can restart the game and their lives will go back to 3 again.</li>
+									<li>Although there were only three levels made, we have a text parser that turns a text document
+									into a level. Therefore, new levels can easily be created by creating another text document and
+									labeling each block in a map with a key letter described in our code documentation.</li>
+									<li>When the user wins the game (collects the last onion on the last level), the user is
+									congratulated on their success and have the option to play again.</li>
+									<li>In the background, the song All Star by Smash Mouth plays to give more entertainment to the game.</li>
+								</ul>
+							</p>
+							<hr>
+							<p>
+								Here is a quick video I made to show a playthrough of the game. 
+								<a href="https://youtu.be/w5ts911Q8ec" target="_blank">Click here</a> 
+								for a direct link if the video isn't working.
+							</p>
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/w5ts911Q8ec" frameborder="0" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
-				</div> <!-- /Project: CSSE220: Arcade Game -->
+				</div>
+				<!-- /Project: CSSE220: Arcade Game -->
 				<!-- Project: CSSE230: Navigational Map -->
 				<div class="panel">
 					<div class="panel-heading">
@@ -150,7 +191,8 @@
 							</blockquote>
 						</div>
 					</div>
-				</div> <!-- /Project: CSSE230: Navigational Map -->
+				</div>
+				<!-- /Project: CSSE230: Navigational Map -->
 				<!-- Project: CSSE333 - Stream -->
 				<div class="panel">
 					<div class="panel-heading">
@@ -170,30 +212,37 @@
 							</blockquote>
 						</div>
 					</div>
-				</div> <!-- /Project: CSSE333 - Stream -->
+				</div>
+				<!-- /Project: CSSE333 - Stream -->
 				<!-- Project: Hero Chrome Extension -->
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-						<a href="#accordion3" data-toggle="collapse" 
+						<a href="#accordion4" data-toggle="collapse" 
 						data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> Hero Chrome Extension <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
 					</h4>
 					</div>
-					<div id="accordion3" class="panel-collapse collapse">
+					<div id="accordion4" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>UNDER CONSTRUCTION</p>
-							<blockquote>
-								<p>Some people worry that artificial intelligence will make us
-							feel inferior, but then, anybody in his right mind should have
-							an inferiority complex every time he looks at a flower.</p>
-								<footer>Alan Kay</footer>
-							</blockquote>
+							<p>
+								<a href="">Hero</a> is a Chrome Extension developed by Paul Bliudzius and I over the summer of 2015.
+								<hr>Features include:
+								<ul>
+									<li>Reading reviews created by other users who use Hero</li>
+									<li>Rate the current website (domain, not page) the user is on</li>
+									<li>Give a review of any length under 140 characters</li>
+									<li>Blocking injection</li>
+								</ul>
+							</p>
 						</div>
 					</div>
-				</div> <!-- /Project: Hero Chrome Extension -->
+				</div>
+				<!-- /Project: Hero Chrome Extension -->
 			</div>
 		</div>
-	</div> <!-- /section 3 -->
+	</div>
+	<!-- /section 3 -->
 	<!-- section 4: Contact Me -->
 	<div id="contact" class="pad-section">
 		<div class="container">
@@ -212,7 +261,8 @@
 			<!-- Email -->
 			<h4 style="color: white">Email: </h4><a href="mailto:derrowap@rose-hulman.edu" class="btn btn-primary btn-md"><span class="glyphicon glyphicon-envelope"> Rose-Hulman</span></a>
 			<hr>
-			<div class="panel-group"> <!-- Resume -->
+			<div class="panel-group">
+				<!-- Resume -->
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -224,11 +274,13 @@
 							<a href="http://derrowap.github.io/images/Resume.pdf" alt="My Resume"></object>
 					</div>
 				</div>
-			</div> <!-- /Resume -->
+			</div>
+			<!-- /Resume -->
 			<!-- Github button -->
 			<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 		</div>
-	</div> <!-- /section 4 -->
+	</div>
+	<!-- /section 4 -->
 </body>
 
 </html>
