@@ -8,6 +8,12 @@
 		<li>
 			Add to projects: link to github repo, video? demonstration,
 			description, maybe jar file in browser but say to use firefox
+			<ul>
+				<li><del>CSSE220 Arcade Game</del></li>
+				<li><del>CSSE230 Navigational Map</del></li>
+				<li>CSSE333 Stream</li>
+				<li><del>Hero Chrome Extension</del></li>
+			</ul>
 		</li>
 		<li>
 			Navigation Bar has "Home" as always active. Use JS to toggle which
@@ -18,13 +24,13 @@
 			clicked on, the drop down stays there, make this go away.
 		</li>
 		<li>
-			Give link to resume on linked in if embedded resume can't open
+			<del>Give link to resume on linked in if embedded resume can't open</del>
 		</li>
 		<li>
 			Possibly rephrase About Me descriptions
 		</li>
 		<li>
-			Have this be sourced on my own domain, maybe derrow-pinion.com ?
+			<del>Have this be sourced on my own domain, maybe derrow-pinion.com</del>
 		</li>
 		<li>
 			If time allows, add a new page to website that has table of contents to
