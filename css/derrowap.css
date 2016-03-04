@@ -1,3 +1,15 @@
+/*
+Author: 		Austin Derrow-Pinion
+Purpose: 		Develop website to showcase projects and skills
+Technologies:	HTML, JavaScript, CSS, Bootstrap, JQuery, 
+				backgroundVideo plugin, Google Doc pdf viewer plugin,
+				Github, CloudFlare, GoDaddy
+Description:
+This website was to further my experience with web development and learn
+new technologies used with web development. By showcasing my projects and
+information about me, I am able to easily provide employers with details
+of my experience and talents.
+*/
 /* general styles */
 html, body {
 	height: 100%;
@@ -52,9 +64,7 @@ html, body {
 }
 
 /* Project Panels */
-#accordion {
-	padding-top: 50px;
-}
+#accordion { padding-top: 50px; }
 .panel .panel-heading {
 	text-align: center;
 	color: white;
@@ -62,10 +72,8 @@ html, body {
 	opacity: 0.8;
 }
 
-
 /* main page sections */
 #home {
-	/*background: url("http://derrowap.github.io/images/cities.jpg") no-repeat center center fixed;*/
 	padding-top: 50px; /* Nav bar at top takes up this space */
 	height: 100%;
 	display: inline-block;
@@ -77,7 +85,7 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
-#about { 
+#about {
 	background: url("http://derrowap.github.io/images/fort-wayne.jpg") no-repeat center center fixed;
 	min-height: 100%;
 	width: 100%;
@@ -89,7 +97,7 @@ html, body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}	
+}
 #portfolio {
 	background: url("http://derrowap.github.io/images/galaxy.jpg") no-repeat center center fixed;
 	min-height: 100%;
@@ -114,7 +122,7 @@ html, body {
 /* Section Headers */
 #section-header {
 	background-color: black;
-	color:red;
+	color: red;
 	opacity: 0.8;
 	border: 2px solid red;
 }
@@ -127,9 +135,8 @@ html, body {
 	font-family: "Raleway Light";
 	src: url("raleway-light-webfont.eot?") format("eot"), url("raleway-light-webfont.woff") format("woff"), url("raleway-light-webfont.ttf") format("truetype");
 }
-h1, h2, h3, h4, h5, h6, a {
-	font-family: "Raleway Light";
-}
+
+h1, h2, h3, h4, h5, h6, a { font-family: "Raleway Light"; }
 p, span, div {
 	font-family: "Raleway Light";
 	font-weight: 900;
@@ -147,6 +154,9 @@ p, span, div {
 		margin: auto;
 	}
 	#about .jumbotron { zoom: 75%; }
-	.text-vcenter { zoom: 85%; top: 20%; }
-	#section-header h1 { zoom: 80%;}
+	.text-vcenter {
+		zoom: 85%;
+		top: 20%;
+	}
+	#section-header h1 { zoom: 80%; }
 }

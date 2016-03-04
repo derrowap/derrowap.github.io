@@ -1,3 +1,15 @@
+<!--
+Author: 		Austin Derrow-Pinion
+Purpose: 		Develop website to showcase projects and skills
+Technologies:	HTML, JavaScript, CSS, Bootstrap, JQuery, 
+				backgroundVideo plugin, Google Doc pdf viewer plugin,
+				Github, CloudFlare, GoDaddy
+Description:
+This website was to further my experience with web development and learn
+new technologies used with web development. By showcasing my projects and
+information about me, I am able to easily provide employers with details
+of my experience and talents.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,18 +22,20 @@
 	<!-- <link rel="stylesheet" href="C:/Users/Austin/Documents/GitHub/derrowap.github.io/css/derrowap.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://derrowap.github.io/css/derrowap.js"></script>
+	<!-- <script src="C:/Users/Austin/Documents/GitHub/derrowap.github.io/css/derrowap.js"></script> -->
 	<!-- scripts for video parallax -->
 	<script type="text/javascript" src="http://rawgit.com/linnett/backgroundVideo/master/backgroundVideo.min.js"></script>
 	<script>
-	/* creates video parallax effects */
 	$(document).ready(function() {
+		/* creates video parallax effects */
 		$("#my-video").backgroundVideo({
 			$videoWrap: $('#video-wrap'),
 			$outerWrap: $('#outer-wrap'),
 			preventContextMenu: true,
 			parallax: true,
 			parallaxOptions: {
-				effect: 1.0
+				effect: 1.0 /* degree of parallax (1.0 is fixed) */
 			}
 		});
 	});
@@ -183,12 +197,57 @@
 					</div>
 					<div id="accordion2" class="panel-collapse collapse">
 						<div class="panel-body">
-							<p>UNDER CONSTRUCTION</p>
-							<blockquote>
-								<p>A computer would deserve to be called intelligent if it could 
-							deceive a human into believing that it was human.</p>
-								<footer>Alan Turing</footer>
-							</blockquote>
+							<p>
+								My <a href="https://github.com/derrowap/FinalProjectCSSE230.git">CSSE230 Navigational Map</a> Project was a school project
+								completed during my Sophomore year winter quarter as a student at Rose-Hulman. The project idea was created by my professor
+								with a set number of required features. As a group, we decided on implementing several other features to go beyond the
+								requirements. It was our job to come up with proper data structures and algorithms in order to implement the
+								features in an efficient manner. We applied our knowledge of data structures taught throughout the course to implement
+								a graph data structure. We added all the state capitals (minus Hawaii's and Alaska's) as possible destinations.
+								<hr>Frontend capabilities (mainly implemented by my group partner) include:
+								<ul>
+									<li>User can specify a starting, ending, and numerous waypoint destinations to travel to. The user can then decide between
+									three searching criteria: shortest time, shortest distance, most interesting route (prioritize destinations
+									in route by their rank). Also, if requested, routes with only a specified number of waypoints in total will be displayed as options.
+									The user will recieve the three best route options available ordered from best to worst.</li>
+									<li>If a route is clicked on, the route is highlighted out on the map for the user to see.</li>
+									<li>Routes display the cost of time, distance, and interest (sum of interest ranking from each destination).</li>
+									<li>A user can print a selected route to a real life printer using the "User" options in the Menu.</li>
+									<li>Details about a destination can be viewed in the right panel by clicking on a route (ending destination is viewed)
+									or by hovering over a destination on the map in the middle panel. Details include the name, state, a picture, coordinates,
+									and interest rating. There is also a button to open up an embedded Wikipedia page of the state capital.</li>
+									<li>Users can list all the different destinations that are above a certain interest rating to view their options or maybe try
+									to find a vacation spot. The list of destinations will pop up and can be clicked on to view details in the right panel.</li>
+									<li>There are admin options in the menu that allow anyone (with the correct password) to insert or delete new destinations
+									within the graph.</li>
+									<li>If when typing in a destination, a name does not match, the GUI will display suggestions (retrieved from the backend)
+									and can be selected and will automatically be inserted in the text box in the proper format for the user.</li>
+								</ul>
+								<hr>Backend capabilities (mainly implemented by me) include:
+								<ul>
+									<li>All the destination objects were created by parsing a text file with the necessary details for each one. After creating
+									all the destinations and inserting them into the graph data structure, the graph was saved to an XML file in order to save some
+									efficiency on startup.</li>
+									<li>The graph was implemented by storing a HashSet (using a LinkedList array and a hash function
+									based on the destination's name) of all the destinations and having all of the destinations store the connections themselves.</li>
+									<li>A connection is simply an object that stores two destination names and the cost. To reduce space, both destinations store
+									a unique LinkedList containing shared connection objects so that there does not have to be double the number of connection objects
+									stored.</li>
+									<li>To calculate a Route for a user, a min-heap priority queue data structure was chosen to take advantage of A*'s searching
+									efficiencies. It starts with a single route object that only contains the starting destination, then builds itself using A*
+									until the guaranteed best route is at the top of the min-heap priority queue. When a route is taken off, the data structure will
+									automatically rebuild itself to find the next best route available. It takes in considerations of waypoints and different cost
+									functions. It is very scalable for any kind of route, additional destinations, and additional cost functions.</li>
+									<li>Used in the A* algorithm, the "straight line distance" between two destinations was calculated using the 
+									"Great Circle Navigation Formulae." Since the world is not flat, it seemed like a bad estimate for the heursitic function, so I
+									found this method online that calculates the actual distance in miles and will even return the exact number Google Maps provides
+									when asked the straight line distance.</li>
+									<li>The Route class simply extends a LinkedList to efficiently store an ordered list that can quickly add more to the end.</li>
+								</ul>
+								<hr>
+								<a href="https://github.com/derrowap/FinalProjectCSSE230" target="_blank">Click here</a> to visit this project's repository on GitHub.
+								<br>UNDER CONSTRUCTION: expect a video demonstration of this application in the future.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -224,16 +283,31 @@
 					</div>
 					<div id="accordion4" class="panel-collapse collapse">
 						<div class="panel-body">
-							<p>UNDER CONSTRUCTION</p>
 							<p>
-								<a href="">Hero</a> is a Chrome Extension developed by Paul Bliudzius and I over the summer of 2015.
+								<a href="">Hero</a> is a Chrome Extension developed by <a href="http://www.bliudzius.com">Paul Bliudzius</a> and I over the summer of 2015. This was a learning experience for me because it was the first form of any web development I have ever done. Previously,
+								I had little knowledge about HTML, JavaScript, and CSS, but after developing that (and this website), I have learned a lot about
+								web development.
 								<hr>Features include:
 								<ul>
 									<li>Reading reviews created by other users who use Hero</li>
+									<li>Give either an "up-vote" or a "down-vote" to reviews created by other users (not allowed on your own review)</li>
 									<li>Rate the current website (domain, not page) the user is on</li>
 									<li>Give a review of any length under 140 characters</li>
-									<li>Blocking injection</li>
+									<li>At anytime, go back to a website and edit your review (only one review allowed per user on a single domain)</li>
+									<li>Blocking injection and maintaining user's security</li>
+									<li>Contact the developers (Paul and I) through the <a href="http://www.lowbear.com/hero/">website</a>.</li>
 								</ul>
+								<hr>
+								<div class="row">
+									<div class="col-xs-6">
+										<img src="http://derrowap.github.io/images/hero.jpg" class="img-thumbnail" alt="Hero logo" width="600" height="400">
+									</div>
+									<div class="col-xs-6" style="text-align: center;">
+										<br>
+										<a href="https://chrome.google.com/webstore/detail/mhlonolhbkbhhaegfpglcgecmbpdhjcc/" target="_blank">Click here</a> 
+										to install the extension for yourself and try it out.
+									</div>
+								</div>
 							</p>
 						</div>
 					</div>
@@ -270,8 +344,14 @@
 					</h4>
 					</div>
 					<div id="myResume" class="panel-collapse collapse">
-						<object type="application/pdf" data="http://derrowap.github.io/images/Resume.pdf" width="100%" height="800px">
-							<a href="http://derrowap.github.io/images/Resume.pdf" alt="My Resume"></object>
+						<div class="panel-body">
+							If your browser does not support viewing PDFs,
+							<a href="https://drive.google.com/file/d/0B12puriMRIDgR2RfZnUxay1jZGs/view?usp=sharing" target="_blank">
+							here is a direct link</a>.
+						</div>
+						<div class="panel-footer">
+							<iframe src="https://drive.google.com/file/d/0B12puriMRIDgR2RfZnUxay1jZGs/preview" width="100%" height="800"></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
