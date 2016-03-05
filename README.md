@@ -27,7 +27,7 @@
 			<del>Give link to resume on linked in if embedded resume can't open</del>
 		</li>
 		<li>
-			Possibly rephrase About Me descriptions
+			<del>Possibly rephrase About Me descriptions</del>
 		</li>
 		<li>
 			<del>Have this be sourced on my own domain, maybe derrow-pinion.com</del>

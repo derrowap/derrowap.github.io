@@ -3,7 +3,7 @@ Author: 		Austin Derrow-Pinion
 Purpose: 		Develop website to showcase projects and skills
 Technologies:	HTML, JavaScript, CSS, Bootstrap, JQuery, 
 				Google Analytics, backgroundVideo plugin, 
-				Google Doc pdf viewer plugin,Github, CloudFlare, 
+				Google Doc pdf viewer plugin, Github, CloudFlare, 
 				GoDaddy
 Description:
 This website was to further my experience with web development and learn
@@ -42,7 +42,7 @@ $(document).ready(function() {
 /* Makes the correct Navigation Bar element active while scrolling */
 $(window).scroll(function() {
 	var windscroll = $(window).scrollTop();
-	
+
 	if (windscroll >= 100) { // window has been scrolled down
 		$('.page-section').each(function(i) {
 			/* offset by 50 to make switching occur at a more natural time */
