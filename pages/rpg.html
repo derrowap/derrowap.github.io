@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script type="text/javascript" src="./project.js"></script>
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #00ff00;
+        }
+        #sign-in {
+            position:absolute;
+            top:100px;
+            left:100px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:relative;width:800px;height:800px">
+        <canvas id="canvas" width="1000" height="800">
+            Your browser does not support the canvas element.
+        </canvas>
+        <div id="sign-in">
+            <p>Sign in or create a new account</p>
+            <br><input type="text" id="username" placeholder="Username">
+            <br><input type="text" id="email" placeholder="Email">
+            <br><input type="password" id="password" placeholder="Password">
+            <br>
+            <button type="button" id="sign-in-btn" onclick="signIn()">Sign In</button>
+            <button type="button" id="create-account" onclick="createAccount()">Create Account</button>
+            <button type="button" id="delete-account" onclick="deleteAccount()">Delete Account</button>
+            <br><br>
+        </div>
+    </div>
+    <div id="messagesDiv" style="overflow-y: auto; height:100px"></div>
+    <input type="text" id="nameInput" placeholder="Name">
+    <input type="text" id="messageInput" placeholder="Message">
+    <script>
+        var chatRef = new Firebase("https://derrowaplegacy.firebaseio.com/chat");
+        $('#messageInput').keypress(function(e) {
+            if (e.keyCode == 13) {
+                var name = $('#nameInput').val();
+                var text = $('#messageInput').val();
+                chatRef.push({
+                    name: name,
+                    text: text
+                });
+                console.log("message pushed: ", name, text);
+                $('#messageInput').val('');
+            }
+        });
+        chatRef.on('child_added', function(snapshot) {
+            var message = snapshot.val();
+            displayChatMessage(message.name, message.text);
+            console.log("Message Retrieved: ", message);
+        });
+
+        function displayChatMessage(name, text) {
+            $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+            $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+        };
+    </script>
+</body>
+
+</html>
