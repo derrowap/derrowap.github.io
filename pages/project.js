@@ -1,12 +1,13 @@
 var playerRef, map, player, playerLabel, optionBar,
 	equipmentScreen, skillsScreen, backpackScreen, settingsScreen,
-	elements = [], entities = [], world = -1, playerAttackTimer;
+	elements = [], entities = [], attacking = [], world = -1,
+	playerAlive = true, playerAttackTimer = 0;
 
 // connection with top level Firebase
 var ref = new Firebase("https://derrowaplegacy.firebaseio.com");
 
 var weapons = {
-	// Level: required to wield object
+	// level: required to wield object
 	// attack: average hit points for weapon
 	// speed: interval weapon can be struck
 	// style: style of combat used when using this weapon
@@ -55,8 +56,8 @@ var weapons = {
 };
 
 var armour = {
-	// Level: required defense level to wield
-	// Block: 0 - 100, percent blocking
+	// level: required defense level to wield
+	// block: 0 - 100, percent blocking
 	clothes: {
 		level: 0,
 		block: 0
@@ -76,7 +77,7 @@ var armour = {
 };
 
 var enemies = {
-	// Level: level of mob, not sure for functionality yet, maybe just tell player
+	// level: level of mob, not sure for functionality yet, maybe just tell player
 	// health: max HP
 	// attack: average damage dealt per hit
 	// defense: 0 - 100, percent blocking
@@ -366,14 +367,12 @@ function loadPlayer() {
 			name: player.name,
 			style: player.weapon.style,
 			level: getLevel(player[weapons[player.weapon].style]),
-			maxHealth: Math.floor(
-				((getLevel(player.melee) + getLevel(player.range) + getLevel(player.magic)) / 3) + getLevel(player.defense)) * 100,
+			maxHealth: getPlayerMaxHealth,
 			health: player.health,
 			update: function() {
 				this.style = weapons[player.weapon].style.capitalizeFirstLetter();
-				this.level = getLevel(player[this.style]);
-				this.maxHealth = Math.floor(
-					((getLevel(player.melee) + getLevel(player.range) + getLevel(player.magic)) / 3) + getLevel(player.defense)) * 100;
+				this.level = getLevel(player[weapons[player.weapon].style]);
+				this.maxHealth = getPlayerMaxHealth();
 				this.health = player.health;
 
 				ctx = map.context;
@@ -396,10 +395,9 @@ function initializePlayer(username) {
 	var userRef = ref.child('users/' + username);
 	userRef.set({
 		'name': username,
-		'health': 40,
+		'health': 100,
 		'money': 0,
 		'skills': { // each value is their exp
-			//TODO: create level system (what xp ranges are what levels?)
 			'melee': 0,
 			'range': 0,
 			'magic': 0,
@@ -638,21 +636,6 @@ function handleCollision(name) {
 	}
 }
 
-function attackedEnemy(index) {
-	if (playerAttackTimer !== 0) {
-		return;
-	}
-	attacked = entities[index];
-	playerWeapon = weapons[player.weapon];
-	attacked.health -= Math.floor(playerWeapon.attack * (attacked.defense / 100));
-	if (attacked.health <= 0) {
-		// enemy died
-		player[weapon[player.weapon].style] += enemies[attacked.name].exp;
-		entities = [];
-	}
-
-}
-
 // ============================================================================
 // Helper functions
 // ============================================================================
@@ -668,6 +651,7 @@ for (i = 1; i <= MAX_LEVEL; i++) {
 	levels.push(levels[i-1] + expCounter);
 	expCounter += 100;
 }
+console.log("levels: ", levels);
 
 function getLevel(exp) {
 	for (i = 1; i <= MAX_LEVEL; i++) {
@@ -677,6 +661,10 @@ function getLevel(exp) {
 	}
 	return MAX_LEVEL;
 }
+console.log("exp 0, level", getLevel(0));
+console.log("exp 50, level", getLevel(50));
+console.log("exp 120, level", getLevel(120));
+console.log("exp 100000, level", getLevel(100000));
 
 function getNextLevelExp(exp) {
 	for (i = 1; i <= MAX_LEVEL; i++) {
@@ -685,6 +673,10 @@ function getNextLevelExp(exp) {
 		}
 	}
 	return exp;
+}
+
+function getPlayerMaxHealth() {
+	return Math.floor(((getLevel(player.melee) + getLevel(player.range) + getLevel(player.magic)) / 3)) * 100;
 }
 
 function drawMobs(entityList) {
@@ -709,6 +701,24 @@ function drawMobs(entityList) {
 }
 
 function updateGameArea() {
+	// Handle attacking
+	if (playerAlive) {
+		if (playerAttackTimer !== 0) {
+			playerAttackTimer--;
+		}
+		entities.forEach(function(entity) {
+			if (entity.attacked) {
+				if (entity.attackTime === 0) {
+					// attack player
+					attackPlayer(entity);
+				} else {
+					// decrease enemies attack time
+					entity.attackTime--;
+				}
+			}
+		});
+	}
+
 	// clear screen
 	map.clear();
 
@@ -740,6 +750,40 @@ function updateGameArea() {
 	}
 }
 
+function attackedEnemy(index) {
+	if (playerAttackTimer !== 0) {
+		console.log("Attacked but playerAttackTimer is not 0");
+		return;
+	}
+	entities[index].attacked = true;
+	playerWeapon = weapons[player.weapon];
+	var damage = Math.floor(playerWeapon.attack * (1 - (entities[index].enemy.defense / 100)));
+	entities[index].health -= damage;
+	playerAttackTimer = playerWeapon.speed;
+
+	console.log("Player attacked " + entities[index].enemy.name + " with damage " + damage);
+
+	if (entities[index].health <= 0) {
+		// enemy died
+		player[weapons[player.weapon].style] += entities[index].enemy.exp;
+		entities[index].health = entities[index].enemy.health;
+		entities[index].attacked = false;
+	}
+}
+
+function attackPlayer(entity) {
+	var damage = Math.floor(entity.enemy.attack * (1 - (armour[player.armour].block / 100)));
+	player.health -= damage;
+	entity.attackTime = entity.enemy.speed;
+
+	console.log("Enemy " + entity.enemy.name + " attacked Player with damage " + damage);
+
+	if (player.health <= 0) {
+		player.health = 0;
+		playerAlive = false;
+	}
+}
+
 // ============================================================================
 // World States
 // ============================================================================
@@ -755,6 +799,7 @@ worldStates = [
 					enemy: this.mob,
 					color: 'red',
 					health: this.mob.health,
+					attacked: false,
 					attackTime: 0,
 					width: 50,
 					height: 50,
@@ -776,6 +821,7 @@ worldStates = [
 					enemy: this.mob,
 					color: 'blue',
 					health: this.mob.health,
+					attacked: false,
 					attackTime: 0,
 					width: 100,
 					height: 100,
