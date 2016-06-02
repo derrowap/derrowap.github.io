@@ -1,7 +1,7 @@
 var playerRef, map, player, playerLabel, optionBar,
 	equipmentScreen, skillsScreen, backpackScreen, settingsScreen,
 	elements = [], entities = [], attacking = [], world = -1,
-	playerAlive = true, playerAttackTimer = 0;
+	playerAlive = true, playerAttackTimer = 0, playerRegenTime = 200;
 
 // connection with top level Firebase
 var ref = new Firebase("https://derrowaplegacy.firebaseio.com");
@@ -768,6 +768,16 @@ function updateGameArea() {
 				}
 			}
 		});
+	}
+
+	// Handle Player Health Regeneration
+	playerRegenTime--;
+	if (playerRegenTime === 0) {
+		player.health += Math.floor(getPlayerMaxHealth() * 0.1);
+		if (player.health > getPlayerMaxHealth()) {
+			player.health = getPlayerMaxHealth();
+		}
+		playerRegenTime = 200;
 	}
 
 	// clear screen
