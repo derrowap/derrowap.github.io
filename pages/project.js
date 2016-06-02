@@ -639,19 +639,35 @@ function handleCollision(name) {
 	switch(name) {
 		case 'equipment-option':
 			console.log("Pressed equipment-option box");
-			equipmentScreen.start();
+			if (equipmentOpen) {
+				equipmentScreen.end();
+			} else {
+				equipmentScreen.start();
+			}
 			break;
 		case 'skills-option':
 			console.log("Pressed skills-option box");
-			skillsScreen.start();
+			if (skillsOpen) {
+				skillsScreen.end();
+			} else {
+				skillsScreen.start();
+			}
 			break;
 		case 'backpack-option':
 			console.log("Pressed backpack-option box");
-			backpackScreen.start();
+			if (backpackOpen) {
+				backpackScreen.end();
+			} else {
+				backpackScreen.start();
+			}
 			break;
 		case 'settings-option':
 			console.log("Pressed settings-option box");
-			settingsScreen.start();
+			if (settingsOpen) {
+				settingsScreen.end();
+			} else {
+				settingsScreen.start();
+			}
 			break;
 		case 'trainRat':
 			console.log("Pressed Train on Rat");
