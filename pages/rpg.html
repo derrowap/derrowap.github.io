@@ -37,13 +37,13 @@
         </div>
     </div>
     <div id="messagesDiv" style="overflow-y: auto; height:100px"></div>
-    <input type="text" id="nameInput" placeholder="Name">
-    <input type="text" id="messageInput" placeholder="Message">
+    <span id="messageName" style='display:none'></span>
+    <input type="text" id="messageInput" placeholder="Message" style='display:none'>
     <script>
         var chatRef = new Firebase("https://derrowaplegacy.firebaseio.com/chat");
         $('#messageInput').keypress(function(e) {
             if (e.keyCode == 13) {
-                var name = $('#nameInput').val();
+                var name = document.getElementById("messageName").innerHTML;
                 var text = $('#messageInput').val();
                 chatRef.push({
                     name: name,

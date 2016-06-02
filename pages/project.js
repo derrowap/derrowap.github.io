@@ -1,5 +1,5 @@
-console.log("Version 0.1");
-
+var version = 0.2;
+console.log("VERSION: " + version);
 
 var playerRef, map, player, playerLabel, optionBar,
 	equipmentScreen, skillsScreen, backpackScreen, settingsScreen,
@@ -136,6 +136,9 @@ function signIn() {
 			console.log("Login Failed!", error);
 		} else {
 			$('#sign-in').hide();
+			document.getElementById("messageName").textContent = username;
+			$('#messageName').toggle();
+			$('#messageInput').toggle();
 			console.log("Authenticated successfully with payload:", authData);
 			playerRef = ref.child('users/' + username);
 			loadPlayer();
