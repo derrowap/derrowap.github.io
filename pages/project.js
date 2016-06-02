@@ -417,6 +417,13 @@ function initializePlayer(username) {
 // ============================================================================
 
 equipmentScreen = {
+	start: function() {
+		stopAllOptionScreens();
+		equipmentOpen = true;
+	},
+	end: function() {
+		equipmentOpen = false;
+	},
 	update: function() {
 		if (equipmentOpen) {
 			var ctx = map.context;
@@ -444,6 +451,13 @@ equipmentScreen = {
 	}
 };
 skillsScreen = {
+	start: function() {
+		stopAllOptionScreens();
+		skillsOpen = true;
+	},
+	end: function() {
+		skillsOpen = false;
+	},
 	update: function() {
 		if (skillsOpen) {
 			var ctx = map.context;
@@ -503,6 +517,13 @@ skillsScreen = {
 	}
 };
 backpackScreen = {
+	start: function() {
+		stopAllOptionScreens();
+		backpackOpen = true;
+	},
+	end: function() {
+		backpackOpen = false;
+	},
 	update: function() {
 		if (backpackOpen) {
 			var ctx = map.context;
@@ -527,6 +548,32 @@ backpackScreen = {
 	}
 };
 settingsScreen = {
+	start: function() {
+		stopAllOptionScreens();
+		settingsOpen = true;
+		elements.push({
+			name: 'trainRat',
+			width: 200,
+			height: 20,
+			top: optionBar.leftY - 375,
+			left: optionBar.leftX - 1
+		});
+		elements.push({
+			name: 'trainZombie',
+			width: 200,
+			height: 20,
+			top: optionBar.leftY - 355,
+			left: optionBar.leftX - 1
+		});
+	},
+	end: function() {
+		for (i = 0; i < elements.length; i++) {
+			if (elements[i].name === 'trainRat' || elements[i].name === 'trainZombie') {
+				elements.splice(i, 1);
+			}
+		}
+		settingsOpen = false;
+	},
 	update: function() {
 		if (settingsOpen) {
 			var ctx = map.context;
@@ -538,11 +585,14 @@ settingsScreen = {
 			// Text settings
 			ctx.font = "20px Consolas";
 			ctx.fillStyle = "blue";
+			ctx.textAlign = "center";
 
 			// Draw top label
 			ctx.fillText("Settings", optionBar.leftX+100, optionBar.leftY-380);
 
 			// Draw content
+			ctx.fillText("Train on Rat", optionBar.leftX + 100, optionBar.leftY - 360);
+			ctx.fillText("Train on Zombie", optionBar.leftX + 100, optionBar.leftY - 340);
 
 
 			console.log("Opened settings screen");
@@ -589,47 +639,29 @@ function handleCollision(name) {
 	switch(name) {
 		case 'equipment-option':
 			console.log("Pressed equipment-option box");
-			if (equipmentOpen) {
-				equipmentOpen = false;
-			} else {
-				equipmentOpen = true;
-				skillsOpen = false;
-				backpackOpen = false;
-				settingsOpen = false;
-			}
+			equipmentScreen.start();
 			break;
 		case 'skills-option':
 			console.log("Pressed skills-option box");
-			if (skillsOpen) {
-				skillsOpen = false;
-			} else {
-				equipmentOpen = false;
-				skillsOpen = true;
-				backpackOpen = false;
-				settingsOpen = false;
-			}
+			skillsScreen.start();
 			break;
 		case 'backpack-option':
 			console.log("Pressed backpack-option box");
-			if (backpackOpen) {
-				backpackOpen = false;
-			} else {
-				equipmentOpen = false;
-				skillsOpen = false;
-				backpackOpen = true;
-				settingsOpen = false;
-			}
+			backpackScreen.start();
 			break;
 		case 'settings-option':
 			console.log("Pressed settings-option box");
-			if (settingsOpen) {
-				settingsOpen = false;
-			} else {
-				equipmentOpen = false;
-				skillsOpen = false;
-				backpackOpen = false;
-				settingsOpen = true;
-			}
+			settingsScreen.start();
+			break;
+		case 'trainRat':
+			console.log("Pressed Train on Rat");
+			world = 0;
+			worldStates[world].start();
+			break;
+		case 'trainZombie':
+			console.log("Pressed Train on Zombie");
+			world = 1;
+			worldStates[world].start();
 			break;
 		default:
 			console.log("Pressed unknown element: " + name);
@@ -661,10 +693,6 @@ function getLevel(exp) {
 	}
 	return MAX_LEVEL;
 }
-console.log("exp 0, level", getLevel(0));
-console.log("exp 50, level", getLevel(50));
-console.log("exp 120, level", getLevel(120));
-console.log("exp 100000, level", getLevel(100000));
 
 function getNextLevelExp(exp) {
 	for (i = 1; i <= MAX_LEVEL; i++) {
@@ -698,6 +726,13 @@ function drawMobs(entityList) {
 		ctx.fillText("HP:" + entity.health + "/" + entity.enemy.health, entity.left + Math.floor(entity.width / 2), entity.top-15);
 		ctx.fillText(entity.enemy.name + " LVL " + entity.enemy.level, entity.left + Math.floor(entity.width / 2), entity.top+Math.floor(entity.height / 2));
 	}
+}
+
+function stopAllOptionScreens() {
+	equipmentScreen.end();
+	skillsScreen.end();
+	backpackScreen.end();
+	settingsScreen.end();
 }
 
 function updateGameArea() {
@@ -734,15 +769,15 @@ function updateGameArea() {
 	}
 
 	// Handle key pressed
-	if (map.keys) {
-		if (map.keys[49]) {
-			world = 0;
-			worldStates[world].start();
-		} else if (map.keys[50]) {
-			world = 1;
-			worldStates[world].start();
-		}
-	}
+	// if (map.keys) {
+	// 	if (map.keys[49]) {
+	// 		world = 0;
+	// 		worldStates[world].start();
+	// 	} else if (map.keys[50]) {
+	// 		world = 1;
+	// 		worldStates[world].start();
+	// 	}
+	// }
 
 	// Handle which world to update
 	if (world !== -1) {
