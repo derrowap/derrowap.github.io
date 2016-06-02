@@ -1,3 +1,6 @@
+console.log("Version 0.1");
+
+
 var playerRef, map, player, playerLabel, optionBar,
 	equipmentScreen, skillsScreen, backpackScreen, settingsScreen,
 	elements = [], entities = [], attacking = [], world = -1,
