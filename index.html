@@ -115,72 +115,120 @@ and talents.
 				<h2 class="text-center">PORTFOLIO</h2>
 			</div>
 			<div class="panel-group" id="accordion">
-				<!-- Project: CSSE220: Arcade Game -->
+
+				<!-- Project: CSSE473: ConvexHull -->
+					<div class="panel">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a href="#ConvexHull" data-toggle="collapse" 
+							data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE473 - Design & Analysis of Algorithms: Convex Hull <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+						</h4>
+						</div>
+						<div id="ConvexHull" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>
+									<p>
+										My CSSE473 Design & Analysis of Algorithms
+										<a href="https://github.com/derrowap/MA490-MachineLearning-FinalProject/blob/master/Final%20Project%20Report.ipynb">Convex Hull</a>
+										Project was a school project completed during the summer after my sophomore year as a student at Rose-Hulman.
+
+										This efficient algorithm takes N many points in a coordinate plane and finds the outermost points which can contain all the other points when connected. 
+									</p>
+									<p>
+										Project was implemented as a web application, so technologies used were Angular JS, Bootstrap, Node.js, and jQuery.
+										You can easily load this project on your machine by using the directions in the README.md file.
+										You can also see <a href="https://github.com/derrowap/CSSE-MA473-ConvexHull/tree/master/screenshots" target="_blank">screenshots of the application here</a>.
+									</p>
+									<p>
+										<a href="https://github.com/derrowap/CSSE-MA473-ConvexHull" target="_blank">Click here</a> to visit this project's repo on GitHub.
+									</p>
+									<hr>
+									<div class="row">
+										<div class="col-xs-12">
+											<img src="https://raw.githubusercontent.com/derrowap/CSSE-MA473-ConvexHull/master/screenshots/500000.PNG" class="img-thumbnail" alt="Sample screenshot" width="600" height="400">
+										</div>
+									</div>
+								</p>
+							</div>
+						</div>
+					</div> <!-- /Project: CSSE473: Trominoes -->
+
+				<!-- Project: CSSE473: Trominoes -->
+					<div class="panel">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a href="#Trominoes" data-toggle="collapse" 
+							data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE473 - Design & Analysis of Algorithms: Trominoes <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+						</h4>
+						</div>
+						<div id="Trominoes" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>
+									<p>
+										My CSSE473 Design & Analysis of Algorithms
+										<a href="https://github.com/derrowap/MA490-MachineLearning-FinalProject/blob/master/Final%20Project%20Report.ipynb">Trominoes</a>
+										Project was a school project completed during the summer after my sophomore year as a student at Rose-Hulman.
+
+										I implemented two different algorithms for tiling a trominoes board.
+										One was from a paper by Johnsonbaugh, which was a divide and conquer problem.
+										The second was named an "L-Shape" divide and conquer problem.
+									</p>
+									<p>
+										Technologies used were Angular JS, Bootstrap, Node.js, and jQuery.
+										You can easily load the project on your machine bhy following the instructions in the README.md file.
+									</p>
+									<hr>
+									<a href="https://github.com/derrowap/CSSE-MA473-Trominoes" target="_blank">Click here</a> to visit this project's repo on GitHub.
+								</p>
+							</div>
+						</div>
+					</div> <!-- /Project: CSSE473: Trominoes -->
+
+				<!-- Project: MA490: Neural Networks Attempt to Mimic Several Functions -->
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-								<a href="#accordion1" data-toggle="collapse" 
-								data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE220: Arcade Game <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
-							</h4>
+						<a href="#MachineLearning" data-toggle="collapse" 
+						data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> MA490 - Machine Learning: Neural Networks Attempt to Mimic Several Functions <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+					</h4>
 					</div>
-					<div id="accordion1" class="panel-collapse collapse">
+					<div id="MachineLearning" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
-								My CSSE220 Object Oriented Programming 
-								<a href="https://github.com/derrowap/CSSE220-ArcadeGameProject.git" target="_blank">Arcade Game</a> Project
-								was the second project I had completed as a Rose-Hulman student. Developed in the winter quarter of my
-								freshman year, this was a huge learning experience. The graphics are not very pretty, but as a group,
-								we tried to make the best of it. The project idea was created by Rose-Hulman professors, but was inspired
-								by a well known game, Dig Dug. <hr>Features include:
-								<ul>
-									<li>Hero (the user, Shrek), is controlled using the arrow keys</li>
-									<li>To progress to the next level, the user must collect all of the onions on the map</li>
-									<li>While the user plays through a level, two different monsters will attack</li>
-									<ul>
-										<li>Nobbin: spawns continuously at a spot in the map (max number of monsters is 2 + the current level).
-										This monster cannot dig through the dirt, therefore we wrote an algorithm to find the shortest path
-										from its current position to the hero through the already created tunnels. This monster also randomly
-										changes into a 'Hobbin' monster and then turns back to normal after a certain amount of time.
-										Graphically is Lord Farquaad, from Shrek.</li>
-										<li>Hobbin: digs through the dirt, ignoring tunnels, to get to the user in the quickest
-										possible route. Graphically is Dragon, from Shrek.</li>
-									</ul>
-									<li>Hero can shoot a ginger bread cookie (using the space button) at monsters to eliminate them</li>
-									<li>Money bags (Donkey from shrek) can be dropped if there is an empty space underneath. If the
-									bag drops more than one square, it will burst open and turn into Princess Fiona (also from Shrek).
-									At this point, Princess Fiona can be saved by the Hero (Shrek) from the evil monsters to gain more
-									points. If a money bag ever collides with a monster or the Hero, they will be eliminated.</li>
-									<li>The Hero (Shrek) has only 3 lives to get through the game. If at any point the lives run out,
-									the user can restart the game and their lives will go back to 3 again.</li>
-									<li>Although there were only three levels made, we have a text parser that turns a text document
-									into a level. Therefore, new levels can easily be created by creating another text document and
-									labeling each block in a map with a key letter described in our code documentation.</li>
-									<li>When the user wins the game (collects the last onion on the last level), the user is
-									congratulated on their success and have the option to play again.</li>
-									<li>In the background, the song All Star by Smash Mouth plays to give more entertainment to the game.</li>
-								</ul>
+								<p>
+									My MA490 Machine Learning 
+									<a href="https://github.com/derrowap/MA490-MachineLearning-FinalProject/blob/master/Final%20Project%20Report.ipynb">Neural Networks Attempt to Mimic Several Functions</a>
+									Project was a school project completed during my Sophomore year spring quarter as a student at Rose-Hulman.
+									In this study, we attempted to compare the power of neural networks’ ability to mimic functions with the functions themselves.
+									<a href="http://neuralnetworksanddeeplearning.com/chap4.html" target="_blank">The Universal Theorem of Approximation</a> states that for any continuous function, there exists a feed-forward network with only a
+									single hidden layer that can approximate it.
+								</p>
+								<p>
+									We were able to train with reasonable accuracy on linear functions, continuous functions, and a sine function which has
+									clear repetition. Some of them were able to extrapolate further past the training data, which tells us it did a great job
+									at generalizing the function overall. Others we were unsuccessful with extrapolating much past the training data.
+								</p>
+								<p>
+									<a href="http://neuralnetworksanddeeplearning.com/chap4.html" target="_blank">The Universal Theorem of Approximation</a> does not say anything about extrapolating, but just being able to fit a graph in a
+									given range. Neural networks are very good at fitting perfectly in a given range, but extrapolating past that range is a
+									much greater challenge because it must overcome over-fitting.
+								</p>
+								<hr>
+								<a href="https://github.com/derrowap/MA490-MachineLearning-FinalProject/blob/master/Final%20Project%20Report.ipynb" target="_blank">Click here</a> to visit the final report hosted on GitHub.
 							</p>
-							<hr>
-							<p>
-								Here is a quick video I made to show a playthrough of the game. 
-								<a href="https://youtu.be/w5ts911Q8ec" target="_blank">Click here</a> 
-								for a direct link if the video isn't working.
-							</p>
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/w5ts911Q8ec" frameborder="0" allowfullscreen></iframe>
-							</div>
 						</div>
 					</div>
-				</div> <!-- /Project: CSSE220: Arcade Game -->
+				</div> <!-- /Project: MA490: Neural Networks Attempt to Mimic Several Functions -->
+	
 				<!-- Project: CSSE230: Navigational Map -->
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-						<a href="#accordion2" data-toggle="collapse" 
-						data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE230: Navigational Map <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+						<a href="#DataStructures" data-toggle="collapse" 
+						data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE230 - Data Structures & Algorithm Analysis: Navigational Map <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
 					</h4>
 					</div>
-					<div id="accordion2" class="panel-collapse collapse">
+					<div id="DataStructures" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
 								My CSSE230 Data Structures and Analysis of Algorithms 
@@ -241,11 +289,11 @@ and talents.
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-						<a href="#accordion3" data-toggle="collapse" data-parent="#accordion">
-						<span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE333: Stream <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+						<a href="#DatabaseSystems" data-toggle="collapse" data-parent="#accordion">
+						<span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE333 - Database Systems: Stream <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
 					</h4>
 					</div>
-					<div id="accordion3" class="panel-collapse collapse">
+					<div id="DatabaseSystems" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
 								My CSSE333 Databse Systems <a href="https://github.com/derrowap/StreamTeam" target="_blank">Stream</a> Project is an Android application built
@@ -283,9 +331,8 @@ and talents.
 									their profile picture, viewable by their friends. If a different picture for that same user is ever set to '1', this trigger
 									will fire and ensure all of the other pictures are set to '0' to avoid confusion and false data.</li>
 								</ul>
-								<hr>Here is the <a href="">open source code</a> provided on GitHub. You can download the application, but will not be able to
+								<hr>Here is the <a href="https://github.com/derrowap/StreamTeam">open source code</a> provided on GitHub. You can download the application, but will not be able to
 								see any data unless on the Rose-Hulman network because that is where the database is hosted unfortunately.
-								<br>UNDER CONSTRUCTION: expect a video demonstration in the future to be here.
 							</p>
 						</div>
 					</div>
@@ -294,11 +341,11 @@ and talents.
 				<div class="panel">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-						<a href="#accordion4" data-toggle="collapse" 
+						<a href="#Hero" data-toggle="collapse" 
 						data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> Hero Chrome Extension <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
 					</h4>
 					</div>
-					<div id="accordion4" class="panel-collapse collapse">
+					<div id="Hero" class="panel-collapse collapse">
 						<div class="panel-body">
 							<p>
 								<a href="https://chrome.google.com/webstore/detail/mhlonolhbkbhhaegfpglcgecmbpdhjcc/">Hero</a> is a Chrome Extension developed by 
@@ -330,6 +377,63 @@ and talents.
 						</div>
 					</div>
 				</div> <!-- /Project: Hero Chrome Extension -->
+				<!-- Project: CSSE220: Arcade Game -->
+				<div class="panel">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+								<a href="#accordion1" data-toggle="collapse" 
+								data-parent="#accordion"><span class="pull-left glyphicon glyphicon-chevron-down"></span> CSSE220: Arcade Game <span class="pull-right glyphicon glyphicon-chevron-down"></span></a>
+							</h4>
+					</div>
+					<div id="accordion1" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>
+								My CSSE220 Object Oriented Programming 
+								<a href="https://github.com/derrowap/CSSE220-ArcadeGameProject.git" target="_blank">Arcade Game</a> Project
+								was the second project I had completed as a Rose-Hulman student. Developed in the winter quarter of my
+								freshman year, this was a huge learning experience. The graphics are not very pretty, but as a group,
+								we tried to make the best of it. The project idea was created by Rose-Hulman professors, but was inspired
+								by a well known game, Dig Dug. <hr>Features include:
+								<ul>
+									<li>Hero (the user, Shrek), is controlled using the arrow keys</li>
+									<li>To progress to the next level, the user must collect all of the onions on the map</li>
+									<li>While the user plays through a level, two different monsters will attack</li>
+									<ul>
+										<li>Nobbin: spawns continuously at a spot in the map (max number of monsters is 2 + the current level).
+										This monster cannot dig through the dirt, therefore we wrote an algorithm to find the shortest path
+										from its current position to the hero through the already created tunnels. This monster also randomly
+										changes into a 'Hobbin' monster and then turns back to normal after a certain amount of time.
+										Graphically is Lord Farquaad, from Shrek.</li>
+										<li>Hobbin: digs through the dirt, ignoring tunnels, to get to the user in the quickest
+										possible route. Graphically is Dragon, from Shrek.</li>
+									</ul>
+									<li>Hero can shoot a ginger bread cookie (using the space button) at monsters to eliminate them</li>
+									<li>Money bags (Donkey from shrek) can be dropped if there is an empty space underneath. If the
+									bag drops more than one square, it will burst open and turn into Princess Fiona (also from Shrek).
+									At this point, Princess Fiona can be saved by the Hero (Shrek) from the evil monsters to gain more
+									points. If a money bag ever collides with a monster or the Hero, they will be eliminated.</li>
+									<li>The Hero (Shrek) has only 3 lives to get through the game. If at any point the lives run out,
+									the user can restart the game and their lives will go back to 3 again.</li>
+									<li>Although there were only three levels made, we have a text parser that turns a text document
+									into a level. Therefore, new levels can easily be created by creating another text document and
+									labeling each block in a map with a key letter described in our code documentation.</li>
+									<li>When the user wins the game (collects the last onion on the last level), the user is
+									congratulated on their success and have the option to play again.</li>
+									<li>In the background, the song All Star by Smash Mouth plays to give more entertainment to the game.</li>
+								</ul>
+							</p>
+							<hr>
+							<p>
+								Here is a quick video I made to show a playthrough of the game. 
+								<a href="https://youtu.be/w5ts911Q8ec" target="_blank">Click here</a> 
+								for a direct link if the video isn't working.
+							</p>
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/w5ts911Q8ec" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div> <!-- /Project: CSSE220: Arcade Game -->
 			</div>
 		</div>
 	</div> <!-- /section 3 -->
